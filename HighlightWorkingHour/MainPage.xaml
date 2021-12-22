@@ -1,0 +1,21 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HighlightWorkingHour.MainPage"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week"
+                           AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek">
+        <scheduler:SfScheduler.DaysViewSettings>
+            <scheduler:SchedulerDaysViewSettings 
+                           StartHour="9"
+                           EndHour="18" />
+        </scheduler:SfScheduler.DaysViewSettings>
+        <scheduler:SfScheduler.TimelineViewSettings>
+            <scheduler:SchedulerTimelineViewSettings 
+                           StartHour="9"
+                           EndHour="18" />
+        </scheduler:SfScheduler.TimelineViewSettings>
+    </scheduler:SfScheduler>
+</ContentPage>
