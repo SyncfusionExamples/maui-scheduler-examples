@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AllDayAppointmentTemplate.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             xmlns:local="clr-namespace:AllDayAppointmentTemplate"
+             xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="allDayAppointmentTemplate">
+                <Grid BackgroundColor="Yellow">
+                    <Label Text="{Binding Data.EventName}" VerticalOptions="Center" TextColor="Green" LineBreakMode="WordWrap" MaxLines="2" FontSize="Caption" FontAttributes="Bold"/>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <schedule:SfScheduler x:Name="Scheduler" 
+                    View="TimelineDay" AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek">
+            <schedule:SfScheduler.AppointmentMapping>
+                <schedule:SchedulerAppointmentMapping
+                Subject="EventName"
+                StartTime="From"
+                EndTime="To"
+                Background="Background"
+                IsAllDay="IsAllDay"
+                StartTimeZone="StartTimeZone"
+                EndTimeZone="EndTimeZone"
+                RecurrenceExceptionDates="RecurrenceExceptions"
+                RecurrenceRule="RecurrenceRule"
+                RecurrenceId="RecurrenceId"/>
+            </schedule:SfScheduler.AppointmentMapping>
+            <scheduler:SfScheduler.DaysView>
+                <scheduler:SchedulerDaysView
+                            AllDayAppointmentTemplate="{StaticResource allDayAppointmentTemplate}"/>
+            </scheduler:SfScheduler.DaysView>
+            <scheduler:SfScheduler.Behaviors>
+                <local:ScheduleBehavior/>
+            </scheduler:SfScheduler.Behaviors>
+        </schedule:SfScheduler>
+    </Grid>
+</ContentPage>
