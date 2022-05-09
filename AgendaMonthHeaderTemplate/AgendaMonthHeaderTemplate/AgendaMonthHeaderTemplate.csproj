@@ -1,0 +1,281 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>AgendaMonthHeaderTemplate</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>AgendaMonthHeaderTemplate</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.companyname.agendamonthheadertemplate</ApplicationId>
+		<ApplicationIdGuid>5125ED1A-E268-4997-83AA-E962B0F96924</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\appicon.svg" ForegroundFile="Resources\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\appiconfg.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\alexandar.png" />
+	  <MauiImage Remove="Resources\Images\apple.jpg" />
+	  <MauiImage Remove="Resources\Images\apricot.jpg" />
+	  <MauiImage Remove="Resources\Images\arrange.png" />
+	  <MauiImage Remove="Resources\Images\austardapple.jpg" />
+	  <MauiImage Remove="Resources\Images\avacado.jpg" />
+	  <MauiImage Remove="Resources\Images\badgeview.svg" />
+	  <MauiImage Remove="Resources\Images\ball.png" />
+	  <MauiImage Remove="Resources\Images\banana.jpg" />
+	  <MauiImage Remove="Resources\Images\barcode.svg" />
+	  <MauiImage Remove="Resources\Images\blueberry.jpg" />
+	  <MauiImage Remove="Resources\Images\bmi_light.png" />
+	  <MauiImage Remove="Resources\Images\book0.png" />
+	  <MauiImage Remove="Resources\Images\book1.png" />
+	  <MauiImage Remove="Resources\Images\book10.png" />
+	  <MauiImage Remove="Resources\Images\book11.png" />
+	  <MauiImage Remove="Resources\Images\book12.png" />
+	  <MauiImage Remove="Resources\Images\book13.png" />
+	  <MauiImage Remove="Resources\Images\book14.png" />
+	  <MauiImage Remove="Resources\Images\book15.png" />
+	  <MauiImage Remove="Resources\Images\book16.png" />
+	  <MauiImage Remove="Resources\Images\book17.png" />
+	  <MauiImage Remove="Resources\Images\book18.png" />
+	  <MauiImage Remove="Resources\Images\book19.png" />
+	  <MauiImage Remove="Resources\Images\book2.png" />
+	  <MauiImage Remove="Resources\Images\book3.png" />
+	  <MauiImage Remove="Resources\Images\book4.png" />
+	  <MauiImage Remove="Resources\Images\book5.png" />
+	  <MauiImage Remove="Resources\Images\book6.png" />
+	  <MauiImage Remove="Resources\Images\book7.png" />
+	  <MauiImage Remove="Resources\Images\book8.png" />
+	  <MauiImage Remove="Resources\Images\book9.png" />
+	  <MauiImage Remove="Resources\Images\brownguitar.jpg" />
+	  <MauiImage Remove="Resources\Images\call.png" />
+	  <MauiImage Remove="Resources\Images\call1.svg" />
+	  <MauiImage Remove="Resources\Images\cameras.png" />
+	  <MauiImage Remove="Resources\Images\cancer_day.png" />
+	  <MauiImage Remove="Resources\Images\cartesianchart.svg" />
+	  <MauiImage Remove="Resources\Images\cherry.jpg" />
+	  <MauiImage Remove="Resources\Images\circularchart.svg" />
+	  <MauiImage Remove="Resources\Images\clara.png" />
+	  <MauiImage Remove="Resources\Images\close.png" />
+	  <MauiImage Remove="Resources\Images\collapse.png" />
+	  <MauiImage Remove="Resources\Images\contact_image.svg" />
+	  <MauiImage Remove="Resources\Images\delete.png" />
+	  <MauiImage Remove="Resources\Images\delete1.png" />
+	  <MauiImage Remove="Resources\Images\diningtable.jpg" />
+	  <MauiImage Remove="Resources\Images\display.png" />
+	  <MauiImage Remove="Resources\Images\docio.svg" />
+	  <MauiImage Remove="Resources\Images\document.svg" />
+	  <MauiImage Remove="Resources\Images\dragon.jpg" />
+	  <MauiImage Remove="Resources\Images\effectsview.svg" />
+	  <MauiImage Remove="Resources\Images\effectview_selection.png" />
+	  <MauiImage Remove="Resources\Images\electronics.jpg" />
+	  <MauiImage Remove="Resources\Images\environment_day.png" />
+	  <MauiImage Remove="Resources\Images\essentialpdf.svg" />
+	  <MauiImage Remove="Resources\Images\excel.svg" />
+	  <MauiImage Remove="Resources\Images\facebook.png" />
+	  <MauiImage Remove="Resources\Images\flowergiftcakes.jpg" />
+	  <MauiImage Remove="Resources\Images\food.jpg" />
+	  <MauiImage Remove="Resources\Images\friends.jpg" />
+	  <MauiImage Remove="Resources\Images\gabriella.png" />
+	  <MauiImage Remove="Resources\Images\gaugebackground.png" />
+	  <MauiImage Remove="Resources\Images\grapes.jpg" />
+	  <MauiImage Remove="Resources\Images\graycanvas.jpg" />
+	  <MauiImage Remove="Resources\Images\greenapple.jpg" />
+	  <MauiImage Remove="Resources\Images\guava.jpg" />
+	  <MauiImage Remove="Resources\Images\happiness_day.png" />
+	  <MauiImage Remove="Resources\Images\health_day.png" />
+	  <MauiImage Remove="Resources\Images\hight.jpg" />
+	  <MauiImage Remove="Resources\Images\idealhouse.jpg" />
+	  <MauiImage Remove="Resources\Images\image1.png" />
+	  <MauiImage Remove="Resources\Images\image10.png" />
+	  <MauiImage Remove="Resources\Images\image11.png" />
+	  <MauiImage Remove="Resources\Images\image12.png" />
+	  <MauiImage Remove="Resources\Images\image13.png" />
+	  <MauiImage Remove="Resources\Images\image14.png" />
+	  <MauiImage Remove="Resources\Images\image15.png" />
+	  <MauiImage Remove="Resources\Images\image16.png" />
+	  <MauiImage Remove="Resources\Images\image17.png" />
+	  <MauiImage Remove="Resources\Images\image18.png" />
+	  <MauiImage Remove="Resources\Images\image19.png" />
+	  <MauiImage Remove="Resources\Images\image2.png" />
+	  <MauiImage Remove="Resources\Images\image20.png" />
+	  <MauiImage Remove="Resources\Images\image21.png" />
+	  <MauiImage Remove="Resources\Images\image22.png" />
+	  <MauiImage Remove="Resources\Images\image23.png" />
+	  <MauiImage Remove="Resources\Images\image24.png" />
+	  <MauiImage Remove="Resources\Images\image25.png" />
+	  <MauiImage Remove="Resources\Images\image26.png" />
+	  <MauiImage Remove="Resources\Images\image27.png" />
+	  <MauiImage Remove="Resources\Images\image28.png" />
+	  <MauiImage Remove="Resources\Images\image29.png" />
+	  <MauiImage Remove="Resources\Images\image3.png" />
+	  <MauiImage Remove="Resources\Images\image30.png" />
+	  <MauiImage Remove="Resources\Images\image4.png" />
+	  <MauiImage Remove="Resources\Images\image5.png" />
+	  <MauiImage Remove="Resources\Images\image6.png" />
+	  <MauiImage Remove="Resources\Images\image7.png" />
+	  <MauiImage Remove="Resources\Images\image8.png" />
+	  <MauiImage Remove="Resources\Images\image9.png" />
+	  <MauiImage Remove="Resources\Images\incoming.svg" />
+	  <MauiImage Remove="Resources\Images\instagram.png" />
+	  <MauiImage Remove="Resources\Images\jackfruit.jpg" />
+	  <MauiImage Remove="Resources\Images\jackson.png" />
+	  <MauiImage Remove="Resources\Images\jewellery.jpg" />
+	  <MauiImage Remove="Resources\Images\kiwi.jpg" />
+	  <MauiImage Remove="Resources\Images\ladybug.jpg" />
+	  <MauiImage Remove="Resources\Images\lemon.jpg" />
+	  <MauiImage Remove="Resources\Images\liam.png" />
+	  <MauiImage Remove="Resources\Images\lime.jpg" />
+	  <MauiImage Remove="Resources\Images\lineargauge.svg" />
+	  <MauiImage Remove="Resources\Images\listview.svg" />
+	  <MauiImage Remove="Resources\Images\lita.png" />
+	  <MauiImage Remove="Resources\Images\mail.svg" />
+	  <MauiImage Remove="Resources\Images\mango.jpg" />
+	  <MauiImage Remove="Resources\Images\mobile.jpg" />
+	  <MauiImage Remove="Resources\Images\naughtyboy.jpg" />
+	  <MauiImage Remove="Resources\Images\nora.png" />
+	  <MauiImage Remove="Resources\Images\notselected.png" />
+	  <MauiImage Remove="Resources\Images\novels.jpg" />
+	  <MauiImage Remove="Resources\Images\orange.jpg" />
+	  <MauiImage Remove="Resources\Images\papaya.jpg" />
+	  <MauiImage Remove="Resources\Images\pdf.svg" />
+	  <MauiImage Remove="Resources\Images\peach.jpg" />
+	  <MauiImage Remove="Resources\Images\people_circle0.png" />
+	  <MauiImage Remove="Resources\Images\people_circle1.png" />
+	  <MauiImage Remove="Resources\Images\people_circle10.png" />
+	  <MauiImage Remove="Resources\Images\people_circle11.png" />
+	  <MauiImage Remove="Resources\Images\people_circle12.png" />
+	  <MauiImage Remove="Resources\Images\people_circle13.png" />
+	  <MauiImage Remove="Resources\Images\people_circle14.png" />
+	  <MauiImage Remove="Resources\Images\people_circle15.png" />
+	  <MauiImage Remove="Resources\Images\people_circle16.png" />
+	  <MauiImage Remove="Resources\Images\people_circle17.png" />
+	  <MauiImage Remove="Resources\Images\people_circle18.png" />
+	  <MauiImage Remove="Resources\Images\people_circle19.png" />
+	  <MauiImage Remove="Resources\Images\people_circle2.png" />
+	  <MauiImage Remove="Resources\Images\people_circle3.png" />
+	  <MauiImage Remove="Resources\Images\people_circle4.png" />
+	  <MauiImage Remove="Resources\Images\people_circle5.png" />
+	  <MauiImage Remove="Resources\Images\people_circle6.png" />
+	  <MauiImage Remove="Resources\Images\people_circle7.png" />
+	  <MauiImage Remove="Resources\Images\people_circle8.png" />
+	  <MauiImage Remove="Resources\Images\people_circle9.png" />
+	  <MauiImage Remove="Resources\Images\perfumes.jpg" />
+	  <MauiImage Remove="Resources\Images\perso.jpg" />
+	  <MauiImage Remove="Resources\Images\person.png" />
+	  <MauiImage Remove="Resources\Images\pineapple.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza0.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza1.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza10.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza11.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza12.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza13.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza14.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza15.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza16.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza17.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza2.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza3.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza4.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza5.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza6.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza7.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza8.jpg" />
+	  <MauiImage Remove="Resources\Images\pizza9.jpg" />
+	  <MauiImage Remove="Resources\Images\pomegranate.jpg" />
+	  <MauiImage Remove="Resources\Images\powerpoint.svg" />
+	  <MauiImage Remove="Resources\Images\presentation.svg" />
+	  <MauiImage Remove="Resources\Images\radialgauge.svg" />
+	  <MauiImage Remove="Resources\Images\radialrangeslider.svg" />
+	  <MauiImage Remove="Resources\Images\radialslider.svg" />
+	  <MauiImage Remove="Resources\Images\rangeselector.svg" />
+	  <MauiImage Remove="Resources\Images\rangeselector_weather_image.svg" />
+	  <MauiImage Remove="Resources\Images\rangeslider.svg" />
+	  <MauiImage Remove="Resources\Images\range_selector_weather.jpg" />
+	  <MauiImage Remove="Resources\Images\raspberry.jpg" />
+	  <MauiImage Remove="Resources\Images\rectangle_pointer.png" />
+	  <MauiImage Remove="Resources\Images\refresh.svg" />
+	  <MauiImage Remove="Resources\Images\scheduler.svg" />
+	  <MauiImage Remove="Resources\Images\sebastian.png" />
+	  <MauiImage Remove="Resources\Images\selected.png" />
+	  <MauiImage Remove="Resources\Images\settingclose.png" />
+	  <MauiImage Remove="Resources\Images\settingicon.png" />
+	  <MauiImage Remove="Resources\Images\settingicondisabled.png" />
+	  <MauiImage Remove="Resources\Images\shopping.jpg" />
+	  <MauiImage Remove="Resources\Images\sim.svg" />
+	  <MauiImage Remove="Resources\Images\skyblue.png" />
+	  <MauiImage Remove="Resources\Images\slider.svg" />
+	  <MauiImage Remove="Resources\Images\sorticon.png" />
+	  <MauiImage Remove="Resources\Images\sort_ascending.png" />
+	  <MauiImage Remove="Resources\Images\sort_decending.png" />
+	  <MauiImage Remove="Resources\Images\sports_health.jpg" />
+	  <MauiImage Remove="Resources\Images\strawberry.jpg" />
+	  <MauiImage Remove="Resources\Images\sun.png" />
+	  <MauiImage Remove="Resources\Images\tabview.svg" />
+	  <MauiImage Remove="Resources\Images\tick.png" />
+	  <MauiImage Remove="Resources\Images\tourism_day.png" />
+	  <MauiImage Remove="Resources\Images\twitter.jpg" />
+	  <MauiImage Remove="Resources\Images\tye.png" />
+	  <MauiImage Remove="Resources\Images\verticalrangeslider.svg" />
+	  <MauiImage Remove="Resources\Images\verticalslider.svg" />
+	  <MauiImage Remove="Resources\Images\washington.png" />
+	  <MauiImage Remove="Resources\Images\watches.jpg" />
+	  <MauiImage Remove="Resources\Images\watermelon.jpg" />
+	  <MauiImage Remove="Resources\Images\whatsapp.png" />
+	  <MauiImage Remove="Resources\Images\xlsio.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Images\april.png" />
+	  <None Remove="Resources\Images\august.png" />
+	  <None Remove="Resources\Images\december.png" />
+	  <None Remove="Resources\Images\february.png" />
+	  <None Remove="Resources\Images\january.png" />
+	  <None Remove="Resources\Images\july.png" />
+	  <None Remove="Resources\Images\june.png" />
+	  <None Remove="Resources\Images\march.png" />
+	  <None Remove="Resources\Images\may.png" />
+	  <None Remove="Resources\Images\november.png" />
+	  <None Remove="Resources\Images\october.png" />
+	  <None Remove="Resources\Images\september.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="20.1.52-preview" />
+	</ItemGroup>
+
+</Project>
