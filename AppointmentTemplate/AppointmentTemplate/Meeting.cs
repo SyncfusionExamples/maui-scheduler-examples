@@ -1,7 +1,10 @@
-﻿using Microsoft.Maui.Controls;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AppointmentTemplate
 {
@@ -16,8 +19,8 @@ namespace AppointmentTemplate
         private string rRUle;
         private string notes;
         private string location;
-        private object? recurrenceId;
-        private object? id;
+        private object recurrenceId;
+        private object id;
 
         public Meeting()
         {
@@ -37,7 +40,7 @@ namespace AppointmentTemplate
         /// <summary>
         /// Property changed event handler
         /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets or sets the value to display the start date.
@@ -146,7 +149,7 @@ namespace AppointmentTemplate
         /// <summary>
         /// Gets or sets the value to display the recurrence id.
         /// </summary>
-        public object? RecurrenceId
+        public object RecurrenceId
         {
             get { return recurrenceId; }
             set
@@ -159,7 +162,7 @@ namespace AppointmentTemplate
         /// <summary>
         /// Gets or sets the value to display the id.
         /// </summary>
-        public object? Id
+        public object Id
         {
             get { return id; }
             set

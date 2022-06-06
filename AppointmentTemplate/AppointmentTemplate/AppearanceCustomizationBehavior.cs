@@ -1,49 +1,45 @@
-﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Scheduler;
+﻿using Syncfusion.Maui.Scheduler;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using Scheduler = Syncfusion.Maui.Scheduler.SfScheduler;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AppointmentTemplate
 {
-    /// <summary>
-    /// The scheduler view customization behavior.
-    /// </summary>
-    internal class AppearanceCustomizationBehavior : Behavior<Syncfusion.Maui.Scheduler.SfScheduler>
+    public class AppearanceCustomizationBehavior : Behavior<SfScheduler>
     {
         /// <summary>
         /// Holds the appointment source collection.
         /// </summary>
-        private ObservableCollection<Meeting>? appointments;
+        private ObservableCollection<Meeting> appointments;
 
         /// <summary>
         /// Holds the scheduler object
         /// </summary>
-        private Scheduler? scheduler;
+        private SfScheduler scheduler;
 
-        protected override void OnAttachedTo(Syncfusion.Maui.Scheduler.SfScheduler bindable)
+        protected override void OnAttachedTo(SfScheduler bindable)
         {
             base.OnAttachedTo(bindable);
             this.scheduler = bindable;
             bindable.ViewChanged += this.OnSchedulerViewChanged;
         }
 
-private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArgs e)
-{
-    if (this.scheduler == null || e.NewVisibleDates == null)
-    {
-        return;
-    }
+        private void OnSchedulerViewChanged(object sender, SchedulerViewChangedEventArgs e)
+        {
+            if (this.scheduler == null || e.NewVisibleDates == null)
+            {
+                return;
+            }
 
-    var startDate = e.NewVisibleDates.FirstOrDefault();
-    var random = new Random();
-    appointments = new ObservableCollection<Meeting>();
-    if (this.scheduler.View == SchedulerView.Week || this.scheduler.View == SchedulerView.WorkWeek)
-    {
-        List<string> eventCollection = new()
+            var startDate = e.NewVisibleDates.FirstOrDefault();
+            var random = new Random();
+            appointments = new ObservableCollection<Meeting>();
+            if (this.scheduler.View == SchedulerView.Week || this.scheduler.View == SchedulerView.WorkWeek)
+            {
+                List<string> eventCollection = new()
         {
             "Environmental Discussion",
             "Health Checkup",
@@ -52,7 +48,7 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             "Tourism"
         };
 
-        List<string> notesCollection = new()
+                List<string> notesCollection = new()
         {
             "A day that creates awareness to promote the healthy planet and reduce the air pollution crisis on nature earth.",
             "A day that raises awareness on different healthy issue. It marks the anniversary of the foundation of WHO.",
@@ -61,7 +57,7 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             "A day that raises awareness on the role of tourism and its effect on social and economic values."
         };
 
-        List<Brush> colorCollection = new()
+                List<Brush> colorCollection = new()
         {
             new SolidColorBrush(Color.FromArgb("#FF56AB56")),
             new SolidColorBrush(Color.FromArgb("#FF357CD2")),
@@ -70,7 +66,7 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             new SolidColorBrush(Color.FromArgb("#FF5BBEAF"))
         };
 
-        List<string> imageCollection = new()
+                List<string> imageCollection = new()
         {
             "environment_day.png",
             "health_day.png",
@@ -79,40 +75,40 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             "tourism_day.png"
         };
 
-        if (e.NewVisibleDates.Any(d => d.Date == DateTime.Now.Date))
-        {
-            startDate = startDate.AddDays(1);
-            for (int i = 0; i < 5; i++)
-            {
-                Meeting meeting = new();
-                meeting.Background = colorCollection[i];
-                meeting.From = startDate.AddDays(i).AddHours(10);
-                meeting.To = startDate.AddDays(i).AddHours(16);
-                meeting.EventName = eventCollection[i];
-                meeting.Notes = notesCollection[i];
-                meeting.Location = imageCollection[i];
-                appointments.Add(meeting);
+                if (e.NewVisibleDates.Any(d => d.Date == DateTime.Now.Date))
+                {
+                    startDate = startDate.AddDays(1);
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Meeting meeting = new();
+                        meeting.Background = colorCollection[i];
+                        meeting.From = startDate.AddDays(i).AddHours(10);
+                        meeting.To = startDate.AddDays(i).AddHours(16);
+                        meeting.EventName = eventCollection[i];
+                        meeting.Notes = notesCollection[i];
+                        meeting.Location = imageCollection[i];
+                        appointments.Add(meeting);
+                    }
+                }
             }
-        }
-    }
-    else if (this.scheduler.View == SchedulerView.TimelineDay || this.scheduler.View == SchedulerView.TimelineWeek || this.scheduler.View == SchedulerView.TimelineWorkWeek)
-    {
-        if (e.NewView == SchedulerView.TimelineDay)
-        {
-            this.scheduler.TimelineView.TimeIntervalWidth = 150;
-        }
-        else
-        {
-            this.scheduler.TimelineView.TimeIntervalWidth = 50;
-        }
+            else if (this.scheduler.View == SchedulerView.TimelineDay || this.scheduler.View == SchedulerView.TimelineWeek || this.scheduler.View == SchedulerView.TimelineWorkWeek)
+            {
+                if (e.NewView == SchedulerView.TimelineDay)
+                {
+                    this.scheduler.TimelineView.TimeIntervalWidth = 150;
+                }
+                else
+                {
+                    this.scheduler.TimelineView.TimeIntervalWidth = 50;
+                }
 
-        if (e.OldView == SchedulerView.TimelineDay || e.OldView == SchedulerView.TimelineWeek || e.OldView == SchedulerView.TimelineWorkWeek)
-        {
-            return;
-        }
+                if (e.OldView == SchedulerView.TimelineDay || e.OldView == SchedulerView.TimelineWeek || e.OldView == SchedulerView.TimelineWorkWeek)
+                {
+                    return;
+                }
 
-        List<Brush> colorCollection = this.GetColorCollection();
-        List<string> currentDayMeetings = new()
+                List<Brush> colorCollection = this.GetColorCollection();
+                List<string> currentDayMeetings = new()
         {
             "General Meeting",
             "Scrum",
@@ -126,34 +122,34 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             "Performance Check"
         };
 
-        for (int i = -90; i < 120; i++)
-        {
-            DateTime date = DateTime.Now.Date.AddDays(i);
-            for (int j = 0; j < 2; j++)
-            {
-                Meeting meeting = new();
-                meeting.Background = colorCollection[random.Next(0, 9)];
-                meeting.From = date.AddHours(random.Next(7, 16));
-                meeting.To = meeting.From.AddHours(4);
-                meeting.EventName = currentDayMeetings[random.Next(0, 9)];
-                appointments.Add(meeting);
+                for (int i = -90; i < 120; i++)
+                {
+                    DateTime date = DateTime.Now.Date.AddDays(i);
+                    for (int j = 0; j < 2; j++)
+                    {
+                        Meeting meeting = new();
+                        meeting.Background = colorCollection[random.Next(0, 9)];
+                        meeting.From = date.AddHours(random.Next(7, 16));
+                        meeting.To = meeting.From.AddHours(4);
+                        meeting.EventName = currentDayMeetings[random.Next(0, 9)];
+                        appointments.Add(meeting);
+                    }
+                }
             }
-        }
-    }
-    else
-    {
-        if (e.OldView == e.NewView)
-        {
-            return;
-        }
+            else
+            {
+                if (e.OldView == e.NewView)
+                {
+                    return;
+                }
 
-        if (e.NewView == SchedulerView.TimelineMonth)
-        {
-            this.scheduler.TimelineView.TimeIntervalWidth = 150;
-        }
+                if (e.NewView == SchedulerView.TimelineMonth)
+                {
+                    this.scheduler.TimelineView.TimeIntervalWidth = 150;
+                }
 
-        List<Brush> colorCollection = this.GetColorCollection();
-        List<string> currentDayMeetings = new()
+                List<Brush> colorCollection = this.GetColorCollection();
+                List<string> currentDayMeetings = new()
         {
             "General Meeting",
             "Scrum",
@@ -167,23 +163,23 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             "Performance Check"
         };
 
-        for (int month = -3; month < 3; month++)
-        {
-            for (int i = 0; i < 20; i++)
-            {
-                DateTime date = DateTime.Now.Date.AddMonths(month).AddDays(random.Next(0, 30));
-                Meeting meeting = new();
-                meeting.Background = colorCollection[random.Next(0, 9)];
-                meeting.From = date.AddHours(random.Next(9, 13));
-                meeting.To = meeting.From.AddHours(4);
-                meeting.EventName = currentDayMeetings[random.Next(0, 9)];
-                appointments.Add(meeting);
+                for (int month = -3; month < 3; month++)
+                {
+                    for (int i = 0; i < 20; i++)
+                    {
+                        DateTime date = DateTime.Now.Date.AddMonths(month).AddDays(random.Next(0, 30));
+                        Meeting meeting = new();
+                        meeting.Background = colorCollection[random.Next(0, 9)];
+                        meeting.From = date.AddHours(random.Next(9, 13));
+                        meeting.To = meeting.From.AddHours(4);
+                        meeting.EventName = currentDayMeetings[random.Next(0, 9)];
+                        appointments.Add(meeting);
+                    }
+                }
             }
-        }
-    }
 
-    this.scheduler.AppointmentsSource = appointments;
-}
+            this.scheduler.AppointmentsSource = appointments;
+        }
 
         /// <summary>
         /// Method to get the color collection.
@@ -207,7 +203,7 @@ private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArg
             return colorCollection;
         }
 
-        protected override void OnDetachingFrom(Syncfusion.Maui.Scheduler.SfScheduler bindable)
+        protected override void OnDetachingFrom(SfScheduler bindable)
         {
             base.OnDetachingFrom(bindable);
             this.scheduler = null;

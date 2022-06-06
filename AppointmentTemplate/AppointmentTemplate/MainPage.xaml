@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppointmentTemplate.MainPage"
              BackgroundColor="{DynamicResource SecondaryColor}"
-             xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+             xmlns:local="clr-namespace:AppointmentTemplate"
+             xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:Class="AppointmentTemplate.MainPage">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -98,14 +99,13 @@
                 <schedule:SchedulerTimelineView
                                 AppointmentTemplate="{StaticResource timelineAppointmentTemplate}" />
             </schedule:SfScheduler.TimelineView>
-            <scheduler:SfScheduler.DaysView>
-                <scheduler:SchedulerDaysView
+            <schedule:SfScheduler.DaysView>
+                <schedule:SchedulerDaysView
                                  AppointmentTemplate="{StaticResource dayAppointmentTemplate}"/>
-            </scheduler:SfScheduler.DaysView>
-            <scheduler:SfScheduler.Behaviors>
+            </schedule:SfScheduler.DaysView>
+            <schedule:SfScheduler.Behaviors>
                 <local:AppearanceCustomizationBehavior/>
-            </scheduler:SfScheduler.Behaviors>
+            </schedule:SfScheduler.Behaviors>
         </schedule:SfScheduler>
-
     </Grid>
 </ContentPage>
