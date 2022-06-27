@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ResourceBusinessObject", "ResourceBusinessObject\ResourceBusinessObject.csproj", "{B4919937-8619-4D27-AC76-596A2D89602F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syncfusion.Maui.Scheduler", "..\..\june 27\maui-schedule\maui\src\scheduler\Syncfusion.Maui.Scheduler.csproj", "{9BA04A41-44C1-4D29-AE52-97B90EF6A107}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +21,6 @@ Global
 		{B4919937-8619-4D27-AC76-596A2D89602F}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
 		{B4919937-8619-4D27-AC76-596A2D89602F}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
 		{B4919937-8619-4D27-AC76-596A2D89602F}.Release-Xml|Any CPU.Deploy.0 = Release|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
-		{9BA04A41-44C1-4D29-AE52-97B90EF6A107}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

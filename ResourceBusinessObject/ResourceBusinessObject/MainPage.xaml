@@ -4,9 +4,13 @@
              x:Class="ResourceBusinessObject.MainPage"
              xmlns:local="clr-namespace:ResourceBusinessObject"
              xmlns:schedule="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+    <ContentPage.Behaviors>
+        <local:ResourceViewBehavior/>
+    </ContentPage.Behaviors>
+    
     <Grid>
-        <schedule:SfScheduler x:Name="Scheduler" 
-                                  
+        <schedule:SfScheduler x:Name="Scheduler"  View="TimelineMonth"
+                                    AppointmentsSource="{Binding Events}"
                                   AllowedViews="TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek" >
 
             <schedule:SfScheduler.Resources>
@@ -67,9 +71,7 @@
             <schedule:SfScheduler.BindingContext>
                 <local:ResourceViewViewModel/>
             </schedule:SfScheduler.BindingContext>
-            <schedule:SfScheduler.Behaviors>
-                <local:ResourceViewBehavior/>
-            </schedule:SfScheduler.Behaviors>
+
         </schedule:SfScheduler>
 
     </Grid>

@@ -49,7 +49,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\..\..\june 27\maui-schedule\maui\src\scheduler\Syncfusion.Maui.Scheduler.csproj" />
+	  <PackageReference Include="Syncfusion.Maui.Core" Version="*" />
+	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="*" />
 	</ItemGroup>
 
 </Project>
