@@ -49,6 +49,37 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Images\people_circle0.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle1.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle10.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle11.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle12.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle13.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle14.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle15.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle16.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle17.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle18.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle19.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle2.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle20.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle21.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle22.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle23.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle24.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle25.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle26.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle27.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle3.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle4.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle5.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle6.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle7.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle8.png" />
+	  <EmbeddedResource Include="Resources\Images\people_circle9.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="Syncfusion.Maui.Core" Version="*" />
 	  <PackageReference Include="Syncfusion.Maui.Scheduler" Version="*" />
 	</ItemGroup>
