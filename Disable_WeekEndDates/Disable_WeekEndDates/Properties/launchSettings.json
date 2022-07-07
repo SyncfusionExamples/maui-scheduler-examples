@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Disable_WeekEndDates (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Disable_WeekEndDates (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
