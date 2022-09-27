@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SchedulerReminders", "SchedulerReminders\SchedulerReminders.csproj", "{D7455096-54B0-4C6C-A9E7-B9EF5157BA8A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syncfusion.Maui.Scheduler", "..\..\..\Task\ReminderSupport\Source\Development\maui-schedule\maui\src\scheduler\Syncfusion.Maui.Scheduler.csproj", "{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syncfusion.Maui.Core", "..\..\..\Task\Volume3_2022\Core\maui-core\maui\src\core\Syncfusion.Maui.Core.csproj", "{89034907-8A37-4C7D-9740-C7616AFB0FE8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,18 +21,6 @@ Global
 		{D7455096-54B0-4C6C-A9E7-B9EF5157BA8A}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
 		{D7455096-54B0-4C6C-A9E7-B9EF5157BA8A}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
 		{D7455096-54B0-4C6C-A9E7-B9EF5157BA8A}.Release-Xml|Any CPU.Deploy.0 = Release|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
-		{AEC8B000-5464-4F2F-B21F-B828DF0BA1A9}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
-		{89034907-8A37-4C7D-9740-C7616AFB0FE8}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

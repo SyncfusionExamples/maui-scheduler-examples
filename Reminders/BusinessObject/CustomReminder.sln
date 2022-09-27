@@ -5,10 +5,6 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomReminder", "CustomReminder\CustomReminder.csproj", "{7D2D2E72-41E1-4888-B7F2-0523F13F71EE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syncfusion.Maui.Core", "..\..\..\Task\Volume3_2022\Core\maui-core\maui\src\core\Syncfusion.Maui.Core.csproj", "{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Syncfusion.Maui.Scheduler", "..\..\..\Task\ReminderSupport\Source\maui-schedule\maui\src\scheduler\Syncfusion.Maui.Scheduler.csproj", "{022DEA28-ADCF-476C-92C3-893EC4C2AF23}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,18 +21,6 @@ Global
 		{7D2D2E72-41E1-4888-B7F2-0523F13F71EE}.Release-Xml|Any CPU.ActiveCfg = Release|Any CPU
 		{7D2D2E72-41E1-4888-B7F2-0523F13F71EE}.Release-Xml|Any CPU.Build.0 = Release|Any CPU
 		{7D2D2E72-41E1-4888-B7F2-0523F13F71EE}.Release-Xml|Any CPU.Deploy.0 = Release|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
-		{19CCC1E2-D680-459B-A1CD-446A4F5FF6E8}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Release|Any CPU.Build.0 = Release|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Release-Xml|Any CPU.ActiveCfg = Release-Xml|Any CPU
-		{022DEA28-ADCF-476C-92C3-893EC4C2AF23}.Release-Xml|Any CPU.Build.0 = Release-Xml|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

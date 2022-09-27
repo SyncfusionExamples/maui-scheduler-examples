@@ -48,8 +48,4 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\..\..\..\Task\ReminderSupport\Source\Development\maui-schedule\maui\src\scheduler\Syncfusion.Maui.Scheduler.csproj" />
-	</ItemGroup>
-
 </Project>
