@@ -1,7 +1,6 @@
 ﻿using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
-
 namespace SchedulerReminders
 {
     public class ReminderBehavior : Behavior<SfScheduler>

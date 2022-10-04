@@ -4,11 +4,6 @@ namespace CustomReminder
 {
     public class Event
     {
-        public Event()
-        {
-
-        }
-
         public DateTime From { get; set; }
         public DateTime To { get; set; }
         public bool IsAllDay { get; set; }

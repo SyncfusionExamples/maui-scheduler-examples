@@ -28,6 +28,7 @@
                     RecurrenceExceptionDates="RecurrenceExceptionDates"
                     RecurrenceRule="RecurrenceRule"
                     RecurrenceId="RecurrenceId"
+                    Id="Id"
                     Reminders="Reminders">
                     <syncfusion:SchedulerAppointmentMapping.ReminderMapping>
                         <syncfusion:SchedulerReminderMapping IsDismissed="IsDismissed"

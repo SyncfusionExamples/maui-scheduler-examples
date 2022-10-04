@@ -2,40 +2,10 @@
 
 namespace CustomReminder
 {
-    public class Reminder : INotifyPropertyChanged
+    public class Reminder 
     {
-        bool isDismissed;
-        TimeSpan timeBeforeStart;
-
-        public bool IsDismissed
-        {
-            get => isDismissed;
-
-            set
-            {
-                if (isDismissed != value)
-                {
-                    isDismissed = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsDismissed)));
-                }
-            }
-        }
-        public TimeSpan TimeBeforeStart
-        {
-            get
-            {
-                return timeBeforeStart;
-            }
-            set
-            {
-                if (timeBeforeStart != value)
-                {
-                    timeBeforeStart = value;
-                    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(TimeBeforeStart)));
-                }
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        public bool IsDismissed { get; set; }
+        
+        public TimeSpan TimeBeforeStart { get; set; }
     }
 }
