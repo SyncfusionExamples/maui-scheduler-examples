@@ -117,21 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Agenda" xml:space="preserve">
+    <value>Ordre du jour</value>
+    <comment>Agenda view</comment>
+  </data>
+  <data name="AllDay" xml:space="preserve">
+    <value>Toute la journée</value>
+    <comment>All Day</comment>
+  </data>
   <data name="Day" xml:space="preserve">
     <value>Jour</value>
-    <comment>DayView</comment>
+    <comment>Day view</comment>
   </data>
   <data name="Month" xml:space="preserve">
     <value>Mois</value>
-    <comment>MonthView</comment>
+    <comment>Month view</comment>
+  </data>
+  <data name="NoEvents" xml:space="preserve">
+    <value>Pas d'événements</value>
+    <comment>No events</comment>
   </data>
   <data name="TimelineDay" xml:space="preserve">
     <value>Chronologie Jour</value>
-    <comment>Timeline day</comment>
+    <comment>Timeline day view</comment>
   </data>
   <data name="TimelineMonth" xml:space="preserve">
     <value>ChronologieMois</value>
-    <comment>Timeline month</comment>
+    <comment>Timeline month view</comment>
   </data>
   <data name="TimelineWeek" xml:space="preserve">
     <value>Chronologie Semaine</value>
@@ -147,7 +159,7 @@
   </data>
   <data name="Week" xml:space="preserve">
     <value>Semaine</value>
-    <comment>WeekView</comment>
+    <comment>Week</comment>
   </data>
   <data name="WorkWeek" xml:space="preserve">
     <value>Semaine de travail</value>

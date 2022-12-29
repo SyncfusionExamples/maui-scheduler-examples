@@ -10,9 +10,7 @@ public partial class App : Application
 	{
 		InitializeComponent();
         CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
-
         SfSchedulerResources.ResourceManager = new ResourceManager("Localization.Resources.SfScheduler", Application.Current.GetType().Assembly);
-
-        MainPage = new MainPage();
+        MainPage = new AppShell();
 	}
 }
