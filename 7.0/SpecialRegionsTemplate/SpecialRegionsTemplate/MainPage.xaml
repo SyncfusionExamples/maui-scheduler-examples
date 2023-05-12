@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SpecialRegionsTemplate.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="specialRegionsTemplate">
+                <Grid Background="MediumPurple">
+                    <Label HorizontalOptions="Center"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           Text="{Binding Text}" />
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Month"
+                               AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+            <scheduler:SfScheduler.DaysView>
+                <scheduler:SchedulerDaysView  TimeRegionTemplate="{StaticResource specialRegionsTemplate}" />
+            </scheduler:SfScheduler.DaysView>
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView TimeRegionTemplate="{StaticResource specialRegionsTemplate}" />
+            </scheduler:SfScheduler.TimelineView>
+        </scheduler:SfScheduler>
+    </Grid>
+
+</ContentPage>

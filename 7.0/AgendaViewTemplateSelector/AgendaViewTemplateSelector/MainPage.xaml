@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaViewTemplateSelector.MainPage"
+             xmlns:local="clr-namespace:AgendaViewTemplateSelector"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="todayDateTemplate">
+                <Grid>
+                    <Label x:Name="label"
+                           HorizontalOptions="FillAndExpand"
+                           Background="LightPink"
+                           VerticalOptions="FillAndExpand"
+                           TextColor="Yellow"
+                           FontSize="25"
+                           Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="normalDateTemplate">
+                <Grid>
+                    <Label x:Name="label"
+                           HorizontalOptions="FillAndExpand"
+                           Background="MediumPurple"
+                           VerticalOptions="FillAndExpand"
+                           TextColor="Black"
+                           FontSize="25"
+                           Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                </Grid>
+            </DataTemplate>
+            <local:AgendaViewTemplateSelector x:Key="agendaViewTemplateSelector"
+                                              TodayDateTemplate="{StaticResource todayDateTemplate}"
+                                              NormalDateTemplate="{StaticResource normalDateTemplate}" />
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Agenda">
+            <scheduler:SfScheduler.AgendaView>
+                <scheduler:SchedulerAgendaView MonthHeaderTemplate="{StaticResource agendaViewTemplateSelector}" />
+            </scheduler:SfScheduler.AgendaView>
+        </scheduler:SfScheduler>
+    </Grid>
+
+</ContentPage>
