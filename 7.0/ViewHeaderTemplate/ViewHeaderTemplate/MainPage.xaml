@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewHeaderTemplate.MainPage"
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="viewHeaderTemplate">
+                <StackLayout x:Name="stackLayout"
+                             Orientation="Vertical"
+                             Background="MediumPurple">
+                    <Label x:Name="label"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:dd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="White">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                         Binding="{Binding}"
+                                         Value="{x:Static system:DateTime.Today}">
+                                <Setter TargetName="label"
+                                        Property="TextColor"
+                                        Value="Orange" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Label x:Name="label1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:ddd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="White">
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                         Binding="{Binding}"
+                                         Value="{x:Static system:DateTime.Today}">
+                                <Setter TargetName="label1"
+                                        Property="TextColor"
+                                        Value="Orange" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout"
+                                     Binding="{Binding}"
+                                     Value="{x:Static system:DateTime.Today}">
+                            <Setter TargetName="stackLayout"
+                                    Property="Background"
+                                    Value="MediumPurple" />
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                </StackLayout>
+            </DataTemplate>
+            <DataTemplate x:Key="timelineViewHeaderTemplate">
+                <Grid x:Name="grid"
+                      Background="MediumPurple">
+                    <Label x:Name="label"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           TextColor="White">
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0:dd} {1:ddd}">
+                                <Binding />
+                                <Binding />
+                            </MultiBinding >
+                        </Label.Text >
+                        <Label.Triggers>
+                            <DataTrigger TargetType="Label"
+                                         Binding="{Binding}"
+                                         Value="{x:Static system:DateTime.Today}">
+                                <Setter TargetName="label"
+                                        Property="TextColor"
+                                        Value="Orange" />
+                            </DataTrigger>
+                        </Label.Triggers>
+                    </Label>
+                    <Grid.Triggers>
+                        <DataTrigger TargetType="Grid"
+                                     Binding="{Binding}"
+                                     Value="{x:Static system:DateTime.Today}">
+                            <Setter TargetName="grid"
+                                    Property="Background"
+                                    Value="LightGreen" />
+                        </DataTrigger>
+                    </Grid.Triggers>
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
+
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Month"
+                               AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+            <scheduler:SfScheduler.DaysView>
+                <scheduler:SchedulerDaysView  ViewHeaderTemplate="{StaticResource viewHeaderTemplate}" />
+            </scheduler:SfScheduler.DaysView>
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource timelineViewHeaderTemplate}" />
+            </scheduler:SfScheduler.TimelineView>
+            <scheduler:SfScheduler.MonthView>
+                <scheduler:SchedulerMonthView  ViewHeaderTemplate="{StaticResource viewHeaderTemplate}" />
+            </scheduler:SfScheduler.MonthView>
+        </scheduler:SfScheduler>
+    </Grid>
+
+</ContentPage>
