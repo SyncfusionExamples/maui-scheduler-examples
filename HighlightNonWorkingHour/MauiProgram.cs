@@ -20,7 +20,6 @@ namespace HighlightNonWorkingHour
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                fonts.AddFont("Segoe-mdl2.ttf", "SegoeMDL2");
             });
 
             return builder.Build();
