@@ -13,7 +13,7 @@ namespace RecurringAppointment
         /// <summary>
         /// color collection
         /// </summary>
-        private List<Brush> colorCollection;
+        private List<Brush> colorCollection = new List<Brush>();
 
         #endregion
 
@@ -36,7 +36,7 @@ namespace RecurringAppointment
         /// <summary>
         /// Gets or sets recursive appointments.
         /// </summary>
-        public ObservableCollection<SchedulerAppointment> RecursiveEvents { get; set; }
+        public ObservableCollection<SchedulerAppointment> RecursiveEvents { get; set; } = new ObservableCollection<SchedulerAppointment>();
 
         /// <summary>
         /// Gets or sets the schedule display date.

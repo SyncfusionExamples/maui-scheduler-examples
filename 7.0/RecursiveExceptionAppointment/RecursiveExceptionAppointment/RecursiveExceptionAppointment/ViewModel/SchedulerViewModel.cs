@@ -13,7 +13,7 @@ namespace RecursiveExceptionAppointment
         /// <summary>
         /// The color collection.
         /// </summary>
-        private List<Brush> colorCollection;
+        private List<Brush> colorCollection = new List<Brush>();
 
         #endregion
 
@@ -36,7 +36,7 @@ namespace RecursiveExceptionAppointment
         /// <summary>
         /// Gets or sets recursive appointments.
         /// </summary>
-        public ObservableCollection<SchedulerAppointment> RecursiveExceptionEvents { get; set; }
+        public ObservableCollection<SchedulerAppointment> RecursiveExceptionEvents { get; set; } = new ObservableCollection<SchedulerAppointment>();
 
         /// <summary>
         /// Gets or sets the schedule display date.

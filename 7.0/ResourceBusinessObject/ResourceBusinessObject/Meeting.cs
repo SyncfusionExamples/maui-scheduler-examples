@@ -6,14 +6,14 @@ namespace ResourceBusinessObject
     public class Meeting : INotifyPropertyChanged
     {
         private DateTime from, to;
-        private string eventName;
+        private string? eventName;
         private bool isAllDay;
         private TimeZoneInfo startTimeZone, endTimeZone;
         private Brush background;
-        private ObservableCollection<DateTime> recurrenceExceptionDates;
-        public ObservableCollection<object> resources;
-        private string rRUle;
-        private string notes;
+        private ObservableCollection<DateTime> recurrenceExceptionDates = new ObservableCollection<DateTime>();
+        public ObservableCollection<object> resources = new ObservableCollection<object>();
+        private string? rRUle;
+        private string? notes;
         private string location;
         private object? recurrenceId;
         private object? id;
@@ -81,7 +81,7 @@ namespace ResourceBusinessObject
         /// <summary>
         /// Gets or sets the value to display the subject.
         /// </summary>
-        public string EventName
+        public string? EventName
         {
             get { return eventName; }
             set
@@ -94,7 +94,7 @@ namespace ResourceBusinessObject
         /// <summary>
         /// Gets or sets the value to display the notes.
         /// </summary>
-        public string Notes
+        public string? Notes
         {
             get { return notes; }
             set
@@ -172,7 +172,7 @@ namespace ResourceBusinessObject
         /// <summary>
         /// Gets or sets the value to display the RRule.
         /// </summary>
-        public string RecurrenceRule
+        public string? RecurrenceRule
         {
             get { return rRUle; }
             set

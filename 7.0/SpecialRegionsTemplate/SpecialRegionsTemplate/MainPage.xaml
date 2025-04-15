@@ -9,7 +9,9 @@
         <Grid.Resources>
             <DataTemplate x:Key="specialRegionsTemplate">
                 <Grid Background="MediumPurple">
-                    <Label HorizontalOptions="Center"
+                    <Label
+                        x:DataType="scheduler:SchedulerTimeRegion"
+                        HorizontalOptions="Center"
                            TextColor="White"
                            VerticalOptions="Center"
                            Text="{Binding Text}" />

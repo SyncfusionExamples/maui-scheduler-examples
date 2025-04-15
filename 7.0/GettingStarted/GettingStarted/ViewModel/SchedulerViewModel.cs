@@ -28,7 +28,7 @@ namespace GettingStarted
         /// <summary>
         /// Gets or sets the appointments.
         /// </summary>
-        public ObservableCollection<SchedulerAppointment> Events { get; set; }
+        public ObservableCollection<SchedulerAppointment>? Events { get; set; }
 
         #endregion
 

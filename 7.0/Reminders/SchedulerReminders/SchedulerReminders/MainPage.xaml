@@ -6,6 +6,7 @@
              x:Class="SchedulerReminders.MainPage">
 
     <syncfusion:SfScheduler x:Name="Scheduler"
+                            x:DataType="local:SchedulerViewModel"
                             View="Week"
                             EnableReminder="True"
                             AppointmentsSource="{Binding Events}">

@@ -4,7 +4,8 @@
              x:Class="BusinessObject.MainPage"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              xmlns:local="clr-namespace:BusinessObject"
-             BackgroundColor="{DynamicResource SecondaryColor}">
+             BackgroundColor="{DynamicResource SecondaryColor}"
+             x:DataType="local:BusinessObjectViewModel">
 
     <scheduler:SfScheduler x:Name="Scheduler"
                            AppointmentsSource="{Binding Events}"

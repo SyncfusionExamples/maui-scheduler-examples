@@ -10,6 +10,7 @@
             <DataTemplate x:Key="todayDateTemplate">
                 <Grid>
                     <Label x:Name="label"
+                           x:DataType="local:AgendaViewTemplateSelector"
                            HorizontalOptions="FillAndExpand"
                            Background="LightPink"
                            VerticalOptions="FillAndExpand"
@@ -21,6 +22,7 @@
             <DataTemplate x:Key="normalDateTemplate">
                 <Grid>
                     <Label x:Name="label"
+                           x:DataType="local:AgendaViewTemplateSelector"
                            HorizontalOptions="FillAndExpand"
                            Background="MediumPurple"
                            VerticalOptions="FillAndExpand"
@@ -30,13 +32,16 @@
                 </Grid>
             </DataTemplate>
             <local:AgendaViewTemplateSelector x:Key="agendaViewTemplateSelector"
+                                              x:DataType="local:AgendaViewTemplateSelector"
                                               TodayDateTemplate="{StaticResource todayDateTemplate}"
                                               NormalDateTemplate="{StaticResource normalDateTemplate}" />
         </Grid.Resources>
         <scheduler:SfScheduler x:Name="Scheduler"
                                View="Agenda">
             <scheduler:SfScheduler.AgendaView>
-                <scheduler:SchedulerAgendaView MonthHeaderTemplate="{StaticResource agendaViewTemplateSelector}" />
+                <scheduler:SchedulerAgendaView 
+                    x:DataType="local:AgendaViewTemplateSelector"
+                    MonthHeaderTemplate="{StaticResource agendaViewTemplateSelector}" />
             </scheduler:SfScheduler.AgendaView>
         </scheduler:SfScheduler>
     </Grid>

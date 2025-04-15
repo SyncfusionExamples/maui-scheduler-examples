@@ -14,13 +14,17 @@
                            HorizontalOptions="Center"
                            VerticalOptions="Center">
                         <Label.Text>
-                            <MultiBinding StringFormat="{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
+                            <MultiBinding 
+                                x:DataType="scheduler:SchedulerHeaderDetails"
+                                StringFormat="{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
                                 <Binding Path="StartDate" />
                                 <Binding Path="EndDate" />
                             </MultiBinding>
                         </Label.Text>
                     </Label>
-                    <Label  HorizontalOptions="Center"
+                    <Label  
+                        x:DataType="scheduler:SchedulerHeaderDetails"
+                        HorizontalOptions="Center"
                             VerticalOptions="End"
                             Text="{Binding Text}"
                             TextColor="Red" />

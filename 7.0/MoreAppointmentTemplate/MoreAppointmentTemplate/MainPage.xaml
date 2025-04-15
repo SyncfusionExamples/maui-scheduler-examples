@@ -9,10 +9,14 @@
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="moreAppointmentsTemplate">
-                <StackLayout Background="LightGreen"
+                <StackLayout 
+                    x:DataType="scheduler:SchedulerDaysView"
+                    Background="LightGreen"
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="FillAndExpand">
-                    <Label Text="{Binding}"
+                    <Label
+                        x:DataType="scheduler:SchedulerDaysView"
+                        Text="{Binding}"
                            TextColor="Black"
                            HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center">

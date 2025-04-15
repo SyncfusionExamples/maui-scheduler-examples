@@ -11,10 +11,12 @@
                            AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek">
         <scheduler:SfScheduler.DaysView>
             <scheduler:SchedulerDaysView 
+                x:DataType="scheduler:SchedulerDaysView"
                            TimeRegions="{Binding TimeRegions}" />
         </scheduler:SfScheduler.DaysView>
         <scheduler:SfScheduler.TimelineView>
             <scheduler:SchedulerTimelineView 
+                x:DataType="scheduler:SchedulerDaysView"
                           TimeRegions="{Binding TimeRegions}" />
         </scheduler:SfScheduler.TimelineView>
         <scheduler:SfScheduler.BindingContext>

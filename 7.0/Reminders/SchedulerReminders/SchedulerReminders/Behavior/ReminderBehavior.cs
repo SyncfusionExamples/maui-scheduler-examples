@@ -11,10 +11,10 @@ namespace SchedulerReminders
             scheduler.ReminderAlertOpening += ReminderBehavior_ReminderAlertOpening;
         }
 
-        private async void ReminderBehavior_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+        private async void ReminderBehavior_ReminderAlertOpening(object? sender, ReminderAlertOpeningEventArgs e)
         {
             ObservableCollection<SchedulerAppointment> appointments = (sender as SfScheduler).AppointmentsSource as ObservableCollection<SchedulerAppointment>;
-            bool snooze = await App.Current.MainPage.DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
+            bool snooze = await DisplayAlert("Reminder", e.Reminders[0].Appointment.Subject + " - " + e.Reminders[0].Appointment.StartTime.ToString(" dddd, MMMM dd, yyyy, hh:mm tt"), "Snooze", "Dismiss");
 
             if (snooze)
             {
@@ -103,5 +103,17 @@ namespace SchedulerReminders
             }
         }
 
+        /// <summary>
+        /// Displays an alert dialog to the user.
+        /// </summary>
+        /// <param name="title">The title of the alert dialog.</param>
+        /// <param name="message">The message to display.</param>
+        /// <param name="cancel">The text for the cancel button.</param>
+        /// <returns>A task representing the asynchronous alert display operation.</returns>
+        private Task DisplayAlert(string title, string message,string accept, string cancel)
+        {
+            return App.Current?.Windows?[0]?.Page!.DisplayAlert(title, message, accept, cancel)
+                   ?? Task.FromResult(false);
+        }
     }
 }

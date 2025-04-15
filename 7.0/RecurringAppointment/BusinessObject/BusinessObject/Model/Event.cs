@@ -5,16 +5,16 @@ namespace BusinessObject
     public class Event : INotifyPropertyChanged
     {
         private DateTime from, to;
-        private string eventName;
+        private string eventName = string.Empty;
         private bool isAllDay;
-        private TimeZoneInfo startTimeZone, endTimeZone;
-        private Brush background;
-        private string rRUle;
+        private TimeZoneInfo? startTimeZone, endTimeZone;
+        private Brush? background;
+        private string rRUle = string.Empty;
 
         /// <summary>
         /// Property changed event handler
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Gets or sets the value to display the start date.
@@ -71,7 +71,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the start time zone.
         /// </summary>
-        public TimeZoneInfo StartTimeZone
+        public TimeZoneInfo? StartTimeZone
         {
             get { return startTimeZone; }
             set
@@ -84,7 +84,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the end time zone.
         /// </summary>
-        public TimeZoneInfo EndTimeZone
+        public TimeZoneInfo? EndTimeZone
         {
             get { return endTimeZone; }
             set
@@ -97,7 +97,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the background.
         /// </summary>
-        public Brush Background
+        public Brush? Background
         {
             get { return background; }
             set

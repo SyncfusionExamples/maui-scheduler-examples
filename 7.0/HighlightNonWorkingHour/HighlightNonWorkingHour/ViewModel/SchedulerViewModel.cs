@@ -22,7 +22,7 @@ namespace HighlightNonWorkingHour
         /// <summary>
         /// Gets or sets time regions.
         /// </summary>
-        public ObservableCollection<SchedulerTimeRegion> TimeRegions { get; set; }
+        public ObservableCollection<SchedulerTimeRegion> TimeRegions { get; set; } = new ObservableCollection<SchedulerTimeRegion>();
 
         #endregion
 

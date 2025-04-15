@@ -8,7 +8,8 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="viewHeaderTemplate">
+            <DataTemplate x:Key="viewHeaderTemplate"
+                          x:DataType="scheduler:SchedulerTimeRegion">
                 <StackLayout x:Name="stackLayout"
                              Orientation="Vertical"
                              Background="MediumPurple">

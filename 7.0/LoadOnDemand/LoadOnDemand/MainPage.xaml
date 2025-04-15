@@ -6,6 +6,7 @@
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
     <scheduler:SfScheduler x:Name="Scheduler"
+                           x:DataType="local:LoadOnDemandViewModel"
                            View="{Binding SchedulerView, Mode=TwoWay}"
                            AllowedViews="Day,Week,WorkWeek,Agenda"
                            AppointmentsSource="{Binding Events}"

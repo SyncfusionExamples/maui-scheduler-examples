@@ -14,8 +14,9 @@ namespace AppointmentTemplate
         private string rRUle;
         private string notes;
         private string location;
-        private object recurrenceId;
-        private object id;
+        private object recurrenceId = new object();
+        private object id = new object();
+        public object? Data { get; set; }
 
         public Meeting()
         {
@@ -35,7 +36,7 @@ namespace AppointmentTemplate
         /// <summary>
         /// Property changed event handler
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Gets or sets the value to display the start date.

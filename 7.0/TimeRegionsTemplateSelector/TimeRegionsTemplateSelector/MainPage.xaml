@@ -12,6 +12,7 @@
                 <Grid Background="LightCyan"
                       Opacity="0.5">
                     <Label x:Name="label"
+                           x:DataType="scheduler:SchedulerTimeRegion"
                            HorizontalOptions="Center"
                            TextColor="Red"
                            Text="{Binding Text}"
@@ -22,6 +23,7 @@
                 <Grid Background="Lightgreen"
                       Opacity="0.5">
                     <Label x:Name="label"
+                           x:DataType="scheduler:SchedulerTimeRegion"
                            HorizontalOptions="Center"
                            TextColor="Orange"
                            Text="{Binding Text}"

@@ -10,7 +10,9 @@
         <Grid.Resources>
             <DataTemplate x:Key="allDayAppointmentTemplate">
                 <Grid BackgroundColor="Yellow">
-                    <Label Text="{Binding Data.EventName}"
+                    <Label
+                        x:DataType="local:Meeting"
+                        Text="{Binding Data.EventName}"
                            VerticalOptions="Center"
                            TextColor="Green"
                            LineBreakMode="WordWrap"

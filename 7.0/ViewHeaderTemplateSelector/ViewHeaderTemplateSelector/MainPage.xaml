@@ -8,7 +8,8 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="normalDateTemplate">
+            <DataTemplate x:Key="normalDateTemplate"
+                          x:DataType="scheduler:SchedulerTimeRegion">
                 <StackLayout x:Name="stackLayout"
                              Orientation="Vertical"
                              Background="MediumPurple">
@@ -28,7 +29,8 @@
                            TextColor="White" />
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="todayDateTemplate">
+            <DataTemplate x:Key="todayDateTemplate"
+                          x:DataType="scheduler:SchedulerTimeRegion">
                 <StackLayout x:Name="stackLayout"
                              Orientation="Vertical"
                              Background="MediumPurple">

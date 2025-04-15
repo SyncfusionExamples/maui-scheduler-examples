@@ -20,6 +20,7 @@
                         <RowDefinition Height="0.1*" />
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0"
+                          x:DataType="local:Meeting"
                           Background="{Binding Data.Background}"
                           IsClippedToBounds="True">
                         <Label Text="{Binding Data.EventName}"

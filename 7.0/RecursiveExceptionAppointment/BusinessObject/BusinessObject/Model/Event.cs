@@ -6,19 +6,19 @@ namespace BusinessObject
     public class Event : INotifyPropertyChanged
     {
         private DateTime from, to;
-        private string eventName;
+        private string eventName = string.Empty;
         private bool isAllDay;
-        private TimeZoneInfo startTimeZone, endTimeZone;
-        private Brush background;
-        private string rRUle;
-        private object recurrenceId;
-        private object id;
+        private TimeZoneInfo? startTimeZone, endTimeZone;
+        private Brush? background;
+        private string? rRUle;
+        private object? recurrenceId;
+        private object? id;
         private ObservableCollection<DateTime> recurrenceExceptionDates = new ObservableCollection<DateTime>();
 
         /// <summary>
         /// Property changed event handler
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         /// <summary>
         /// Gets or sets the value to display the start date.
@@ -75,7 +75,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the start time zone.
         /// </summary>
-        public TimeZoneInfo StartTimeZone
+        public TimeZoneInfo? StartTimeZone
         {
             get { return startTimeZone; }
             set
@@ -88,7 +88,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the end time zone.
         /// </summary>
-        public TimeZoneInfo EndTimeZone
+        public TimeZoneInfo? EndTimeZone
         {
             get { return endTimeZone; }
             set
@@ -101,7 +101,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the recurrence id.
         /// </summary>
-        public object RecurrenceId
+        public object? RecurrenceId
         {
             get { return recurrenceId; }
             set
@@ -114,7 +114,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the id.
         /// </summary>
-        public object Id
+        public object? Id
         {
             get { return id; }
             set
@@ -127,7 +127,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the RRule.
         /// </summary>
-        public string RecurrenceRule
+        public string? RecurrenceRule
         {
             get { return rRUle; }
             set
@@ -153,7 +153,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets the value to display the background.
         /// </summary>
-        public Brush Background
+        public Brush? Background
         {
             get { return background; }
             set

@@ -7,8 +7,8 @@ namespace HeaderTemplateSelector
         public HeaderTemplateSelector()
         {
         }
-        public DataTemplate TodayDatesTemplate { get; set; }
-        public DataTemplate NormaldatesTemplate { get; set; }
+        public DataTemplate TodayDatesTemplate { get; set; } = new DataTemplate();
+        public DataTemplate NormaldatesTemplate { get; set; } = new DataTemplate();
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             var headerDetails = item as SchedulerHeaderDetails;

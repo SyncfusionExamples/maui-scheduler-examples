@@ -12,7 +12,7 @@ namespace BusinessObject
         /// <summary>
         /// The color collection.
         /// </summary>
-        private List<Brush> colorCollection;
+        private List<Brush> colorCollection = new List<Brush>();
 
         #endregion
 
@@ -35,7 +35,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets recursive appointments.
         /// </summary>
-        public ObservableCollection<Event> RecursiveExceptionEvents { get; set; }
+        public ObservableCollection<Event> RecursiveExceptionEvents { get; set; } = new ObservableCollection<Event>();
 
         /// <summary>
         /// Gets or sets the schedule display date.

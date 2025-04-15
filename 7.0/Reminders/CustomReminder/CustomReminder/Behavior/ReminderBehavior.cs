@@ -11,7 +11,7 @@ namespace CustomReminder
             scheduler.ReminderAlertOpening += ReminderBehavior_ReminderAlertOpening;
         }
 
-        private async void ReminderBehavior_ReminderAlertOpening(object sender, ReminderAlertOpeningEventArgs e)
+        private async void ReminderBehavior_ReminderAlertOpening(object? sender, ReminderAlertOpeningEventArgs e)
         {
             ObservableCollection<SchedulerAppointment> appointments = (sender as SfScheduler).AppointmentsSource as ObservableCollection<SchedulerAppointment>;
 

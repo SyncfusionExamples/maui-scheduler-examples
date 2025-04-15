@@ -4,6 +4,7 @@
              x:Class="GettingStarted.MainPage"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              xmlns:local="clr-namespace:GettingStarted"
+             x:DataType="local:SchedulerViewModel"
              BackgroundColor="{DynamicResource SecondaryColor}">
 
     <scheduler:SfScheduler x:Name="Scheduler"

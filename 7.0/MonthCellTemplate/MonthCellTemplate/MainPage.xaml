@@ -9,7 +9,8 @@
         <Grid.Resources>
             <DataTemplate x:Key="cellTemplate">
                 <Grid Background="Red">
-                    <Label HorizontalTextAlignment="Center"
+                    <Label 
+                        HorizontalTextAlignment="Center"
                            TextColor="Black"
                            Text="{Binding DateTime.Day}" />
                 </Grid>

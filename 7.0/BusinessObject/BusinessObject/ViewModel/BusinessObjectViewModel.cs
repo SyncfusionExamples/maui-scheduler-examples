@@ -14,17 +14,17 @@ namespace BusinessObject
         /// <summary>
         /// team management
         /// </summary>
-        private List<string> subjectCollection;
+        private List<string> subjectCollection = new List<string>();
 
         /// <summary>
         /// Notes Collection.
         /// </summary>
-        private List<string> noteCollection;
+        private List<string> noteCollection = new List<string>();
 
         /// <summary>
         /// color collection
         /// </summary>
-        private List<Brush> colorCollection;
+        private List<Brush> colorCollection = new List<Brush>();
 
         #endregion
 
@@ -54,7 +54,7 @@ namespace BusinessObject
         /// <summary>
         /// Gets or sets appointments.
         /// </summary>
-        public ObservableCollection<Event> Events { get; set; }
+        public ObservableCollection<Event>? Events { get; set; }
 
         #endregion
 
