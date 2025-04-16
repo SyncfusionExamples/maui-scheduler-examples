@@ -1,14 +1,8 @@
-﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Scheduler;
-using System;
+﻿using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
 
 namespace GettingStarted
 {
-    /// <summary>
-    /// The getting started view model.
-    /// </summary>
     public class SchedulerViewModel
     {
         #region Constructor
@@ -34,7 +28,7 @@ namespace GettingStarted
         /// <summary>
         /// Gets or sets the appointments.
         /// </summary>
-        public ObservableCollection<SchedulerAppointment> Events { get; set; }
+        public ObservableCollection<SchedulerAppointment>? Events { get; set; }
 
         #endregion
 

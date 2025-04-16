@@ -1,5 +1,10 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AppointmentTemplate
 {
@@ -14,9 +19,8 @@ namespace AppointmentTemplate
         private string rRUle;
         private string notes;
         private string location;
-        private object recurrenceId = new object();
-        private object id = new object();
-        public object? Data { get; set; }
+        private object recurrenceId;
+        private object id;
 
         public Meeting()
         {
@@ -36,7 +40,7 @@ namespace AppointmentTemplate
         /// <summary>
         /// Property changed event handler
         /// </summary>
-        public event PropertyChangedEventHandler? PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
         /// <summary>
         /// Gets or sets the value to display the start date.

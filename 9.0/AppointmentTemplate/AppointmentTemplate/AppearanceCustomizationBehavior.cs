@@ -1,5 +1,10 @@
 ﻿using Syncfusion.Maui.Scheduler;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace AppointmentTemplate
 {
@@ -8,12 +13,12 @@ namespace AppointmentTemplate
         /// <summary>
         /// Holds the appointment source collection.
         /// </summary>
-        private ObservableCollection<Meeting>? appointments;
+        private ObservableCollection<Meeting> appointments;
 
         /// <summary>
         /// Holds the scheduler object
         /// </summary>
-        private SfScheduler? scheduler;
+        private SfScheduler scheduler;
 
         protected override void OnAttachedTo(SfScheduler bindable)
         {
@@ -22,7 +27,7 @@ namespace AppointmentTemplate
             bindable.ViewChanged += this.OnSchedulerViewChanged;
         }
 
-        private void OnSchedulerViewChanged(object? sender, SchedulerViewChangedEventArgs e)
+        private void OnSchedulerViewChanged(object sender, SchedulerViewChangedEventArgs e)
         {
             if (this.scheduler == null || e.NewVisibleDates == null)
             {

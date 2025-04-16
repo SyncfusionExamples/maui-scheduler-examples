@@ -8,28 +8,61 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="normalDateTemplate">
-                <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="MediumPurple">
-                    <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="White" />
-                    <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="White"/>
+            <DataTemplate x:Key="normalDateTemplate"
+                          x:DataType="scheduler:SchedulerTimeRegion">
+                <StackLayout x:Name="stackLayout"
+                             Orientation="Vertical"
+                             Background="MediumPurple">
+                    <Label x:Name="label"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:dd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="White" />
+                    <Label x:Name="label1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:ddd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="White" />
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="todayDateTemplate">
-                <StackLayout x:Name="stackLayout" Orientation="Vertical" Background="MediumPurple">
-                    <Label x:Name="label" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:dd}'}" FontSize="Small" FontFamily="Bold" TextColor="Yellow" />
-                    <Label x:Name="label1" HorizontalOptions="Center"  VerticalOptions="Center" Text="{Binding StringFormat='{0:ddd}'}"  FontSize="Small" FontFamily="Bold" TextColor="Yellow"/>
+            <DataTemplate x:Key="todayDateTemplate"
+                          x:DataType="scheduler:SchedulerTimeRegion">
+                <StackLayout x:Name="stackLayout"
+                             Orientation="Vertical"
+                             Background="MediumPurple">
+                    <Label x:Name="label"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:dd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="Yellow" />
+                    <Label x:Name="label1"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Text="{Binding StringFormat='{0:ddd}'}"
+                           FontSize="Small"
+                           FontFamily="Bold"
+                           TextColor="Yellow" />
                 </StackLayout>
             </DataTemplate>
-            <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector" TodayDateTemplate="{StaticResource todayDateTemplate}" NormalDateTemplate="{StaticResource normalDateTemplate}"/>
+            <local:ViewHeaderTemplateSelector x:Key="viewHeaderTemplateSelector"
+                                              TodayDateTemplate="{StaticResource todayDateTemplate}"
+                                              NormalDateTemplate="{StaticResource normalDateTemplate}" />
         </Grid.Resources>
-        <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Week" >
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Week">
             <scheduler:SfScheduler.DaysView>
-                <scheduler:SchedulerDaysView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}"/>
+                <scheduler:SchedulerDaysView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
             </scheduler:SfScheduler.DaysView>
             <scheduler:SfScheduler.TimelineView>
-                <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}"/>
+                <scheduler:SchedulerTimelineView ViewHeaderTemplate="{StaticResource viewHeaderTemplateSelector}" />
             </scheduler:SfScheduler.TimelineView>
         </scheduler:SfScheduler>
     </Grid>
+
 </ContentPage>
