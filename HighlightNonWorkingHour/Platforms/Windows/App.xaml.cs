@@ -19,16 +19,9 @@ namespace HighlightNonWorkingHour.WinUI
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
+            InitializeComponent();
         }
 
         protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
-
-        protected override void OnLaunched(LaunchActivatedEventArgs args)
-        {
-            base.OnLaunched(args);
-
-            Microsoft.Maui.Essentials.Platform.OnLaunched(args);
-        }
     }
 }

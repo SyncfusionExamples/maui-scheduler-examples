@@ -7,15 +7,15 @@
     <scheduler:SfScheduler x:Name="Scheduler" 
                            View="Week"
                            AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek">
-        <scheduler:SfScheduler.DaysViewSettings>
-            <scheduler:SchedulerDaysViewSettings 
+        <scheduler:SfScheduler.DaysView>
+            <scheduler:SchedulerDaysView 
                            StartHour="9"
                            EndHour="18" />
-        </scheduler:SfScheduler.DaysViewSettings>
-        <scheduler:SfScheduler.TimelineViewSettings>
-            <scheduler:SchedulerTimelineViewSettings 
+        </scheduler:SfScheduler.DaysView>
+        <scheduler:SfScheduler.TimelineView>
+            <scheduler:SchedulerTimelineView 
                            StartHour="9"
                            EndHour="18" />
-        </scheduler:SfScheduler.TimelineViewSettings>
+        </scheduler:SfScheduler.TimelineView>
     </scheduler:SfScheduler>
 </ContentPage>

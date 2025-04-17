@@ -60,7 +60,8 @@ namespace LoadOnDemand
             //// ShowBusyIndicator is used to start and stop the loading indicator animation before and after appointments are loaded with specified delay.
             this.ShowBusyIndicator = true;
             await Task.Delay(1500);
-            var eventCollection = this.GenerateSchedulerAppointments(((SchedulerQueryAppointmentsEventArgs)obj).VisibleDates);
+            var visibleDates = ((SchedulerQueryAppointmentsEventArgs)obj).VisibleDates.ToList();
+            var eventCollection = this.GenerateSchedulerAppointments(visibleDates);
 
             //// To load more appointments when the new month is loaded on view.
             if (this.SchedulerView != SchedulerView.Agenda)

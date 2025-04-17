@@ -12,20 +12,20 @@ namespace DragAndDropSample
         /// <summary>
         /// The subject collections.
         /// </summary>
-        private List<string> subjectCollection;
+        private List<string>? subjectCollection;
 
         /// <summary>
         /// The notes collection.
         /// </summary>
-        private List<string> noteCollection;
+        private List<string>? noteCollection;
 
         /// <summary>
         /// The color collection
         /// </summary>
-        private List<Brush> colorCollection;
+        private List<Brush>? colorCollection;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SchedulerViewModel" /> class.
+        /// Initializes a new instance of the <see cref="DragDropViewModel" /> class.
         /// </summary>
         public DragDropViewModel()
         {
@@ -38,7 +38,7 @@ namespace DragAndDropSample
         /// <summary>
         /// Gets or sets appointments.
         /// </summary>
-        public ObservableCollection<Meeting> Events { get; set; }
+        public ObservableCollection<Meeting>? Events { get; set; }
 
         /// <summary>
         /// Method to create the note collection.
@@ -79,8 +79,12 @@ namespace DragAndDropSample
                     int hour = randomTime.Next((int)randomTimeCollection[additionalAppointmentIndex].X, (int)randomTimeCollection[additionalAppointmentIndex].Y);
                     meeting.From = new DateTime(date.Year, date.Month, date.Day, hour, 0, 0);
                     meeting.To = meeting.From.AddHours(1);
-                    meeting.EventName = this.subjectCollection[randomTime.Next(9)];
-                    meeting.Background = this.colorCollection[randomTime.Next(10)];
+                    if (subjectCollection != null && colorCollection != null)
+                    {
+                        meeting.EventName = subjectCollection[randomTime.Next(9)];
+                        meeting.Background = colorCollection[randomTime.Next(10)];
+                    }
+
                     meeting.IsAllDay = false;
                     meeting.StartTimeZone = TimeZoneInfo.Local;
                     meeting.EndTimeZone = TimeZoneInfo.Local;

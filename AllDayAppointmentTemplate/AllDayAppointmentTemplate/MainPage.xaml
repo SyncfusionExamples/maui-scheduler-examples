@@ -8,9 +8,7 @@
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="allDayAppointmentTemplate">
-                <Grid BackgroundColor="Yellow">
-                    <Label Text="{Binding Data.EventName}" VerticalOptions="Center" TextColor="Green" LineBreakMode="WordWrap" MaxLines="2" FontSize="Caption" FontAttributes="Bold"/>
-                </Grid>
+                <Label Text="{Binding Data.EventName}" VerticalOptions="Center" TextColor="Green" LineBreakMode="WordWrap" MaxLines="2" FontSize="Caption" FontAttributes="Bold"/>
             </DataTemplate>
         </Grid.Resources>
         <schedule:SfScheduler x:Name="Scheduler" 
@@ -28,13 +26,13 @@
                 RecurrenceRule="RecurrenceRule"
                 RecurrenceId="RecurrenceId"/>
             </schedule:SfScheduler.AppointmentMapping>
-            <scheduler:SfScheduler.DaysView>
-                <scheduler:SchedulerDaysView
+            <schedule:SfScheduler.DaysView>
+                <schedule:SchedulerDaysView
                             AllDayAppointmentTemplate="{StaticResource allDayAppointmentTemplate}"/>
-            </scheduler:SfScheduler.DaysView>
-            <scheduler:SfScheduler.Behaviors>
+            </schedule:SfScheduler.DaysView>
+            <schedule:SfScheduler.Behaviors>
                 <local:ScheduleBehavior/>
-            </scheduler:SfScheduler.Behaviors>
+            </schedule:SfScheduler.Behaviors>
         </schedule:SfScheduler>
     </Grid>
 </ContentPage>

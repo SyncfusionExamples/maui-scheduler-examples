@@ -4,9 +4,7 @@
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              xmlns:local="clr-namespace:DragAndDropSample"
              x:Class="DragAndDropSample.MainPage">
-    <ContentPage.Behaviors>
-        <local:DragDropBehavior/>
-    </ContentPage.Behaviors>
+    
     <Grid ColumnDefinitions="0.8*, 0.2*">
         <scheduler:SfScheduler x:Name="scheduler" View="Week" AllowAppointmentDrag="True" Grid.Column="0"
                                   AppointmentsSource="{Binding Events}"
