@@ -1,0 +1,18 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RecurringSchedulerAppointment.MainPage"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
+             x:DataType="local:SchedulerViewModel"
+             xmlns:local="clr-namespace:RecurringSchedulerAppointment"
+             BackgroundColor="{DynamicResource SecondaryColor}">
+
+    <scheduler:SfScheduler x:Name="Scheduler" 
+                           View="Week" 
+                           DisplayDate="{Binding DisplayDate}"
+                           AppointmentsSource="{Binding RecursiveExceptionEvents}"
+                           AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
+        <scheduler:SfScheduler.BindingContext>
+            <local:SchedulerViewModel/>
+        </scheduler:SfScheduler.BindingContext>
+    </scheduler:SfScheduler>
+</ContentPage>
