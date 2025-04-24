@@ -8,12 +8,14 @@
 
 <Grid>
     <Grid.Resources>
-        <DataTemplate x:Key="timeRegiontemplate">
+        <DataTemplate x:Key="timeRegiontemplate"
+                      x:DataType="scheduler:SchedulerTimeRegion">
             <Grid Background = "LightCyan" Opacity="0.5">
                 <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" Text="{Binding Text}" VerticalOptions="Center" />
             </Grid>
         </DataTemplate>
-        <DataTemplate x:Key="timeRegiontemplate1">
+        <DataTemplate x:Key="timeRegiontemplate1"
+                      x:DataType="scheduler:SchedulerTimeRegion">
             <Grid Background = "Lightgreen" Opacity="0.5">
                 <Label x:Name="label" HorizontalOptions="Center" TextColor="Orange" Text="{Binding Text}" VerticalOptions="Center" />
             </Grid>
