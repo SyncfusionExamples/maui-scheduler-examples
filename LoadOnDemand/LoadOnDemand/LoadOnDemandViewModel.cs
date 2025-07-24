@@ -1,11 +1,6 @@
 ﻿using Syncfusion.Maui.Scheduler;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace LoadOnDemand
@@ -79,7 +74,7 @@ namespace LoadOnDemand
             this.ShowBusyIndicator = false;
         }
 
-        private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments(List<DateTime> visibleDates)
+        private ObservableCollection<SchedulerAppointment> GenerateSchedulerAppointments(ReadOnlyCollection<DateTime> visibleDates)
         {
             var brush = new ObservableCollection<Brush>
     {

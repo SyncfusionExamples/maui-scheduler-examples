@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localization", "Localization\Localization.csproj", "{88815C6E-CAE8-4B93-B345-43C7493F5E49}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Localization", "Localization\Localization.csproj", "{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{88815C6E-CAE8-4B93-B345-43C7493F5E49}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC15AB9-5D5A-4338-A4AF-62CB27962A55}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

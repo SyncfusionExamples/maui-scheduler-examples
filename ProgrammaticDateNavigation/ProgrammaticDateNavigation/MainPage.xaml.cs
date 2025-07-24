@@ -6,9 +6,10 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-	private void button_Clicked(object sender, EventArgs e)
-	{
-		this.scheduler.DisplayDate = DateTime.Now.AddDays(30);
-	}
+
+    private void button_Clicked(object sender, EventArgs e)
+    {
+        this.scheduler.DisplayDate = DateTime.Now.AddDays(30);
+    }
 }
 

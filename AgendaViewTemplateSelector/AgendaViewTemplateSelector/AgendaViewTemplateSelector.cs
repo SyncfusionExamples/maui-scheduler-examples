@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AgendaViewTemplateSelector
+﻿namespace AgendaViewTemplateSelector
 {
     public class AgendaViewTemplateSelector : DataTemplateSelector
     {
         public AgendaViewTemplateSelector()
         {
         }
-        public DataTemplate NormalDateTemplate { get; set; }
-        public DataTemplate TodayDateTemplate { get; set; }
+        public DataTemplate NormalDateTemplate { get; set; } = new DataTemplate();
+        public DataTemplate TodayDateTemplate { get; set; } = new DataTemplate();
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             var dateTime = (DateTime)item;
@@ -22,5 +16,4 @@ namespace AgendaViewTemplateSelector
                 return NormalDateTemplate;
         }
     }
-
 }

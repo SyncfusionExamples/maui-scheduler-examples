@@ -11,6 +11,9 @@ public partial class App : Application
 		InitializeComponent();
         CultureInfo.CurrentUICulture = new CultureInfo("fr-FR");
         SfSchedulerResources.ResourceManager = new ResourceManager("Localization.Resources.SfScheduler", Application.Current.GetType().Assembly);
-        MainPage = new AppShell();
 	}
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(new MainPage());
+    }
 }

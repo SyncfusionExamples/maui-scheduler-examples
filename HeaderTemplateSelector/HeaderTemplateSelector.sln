@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaderTemplateSelector", "HeaderTemplateSelector\HeaderTemplateSelector.csproj", "{EE804D0B-D688-4585-896D-BA1FDFF11063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeaderTemplateSelector", "HeaderTemplateSelector\HeaderTemplateSelector.csproj", "{3C7215A9-D3E7-40BB-924B-25DD422750D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE804D0B-D688-4585-896D-BA1FDFF11063}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C7215A9-D3E7-40BB-924B-25DD422750D7}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

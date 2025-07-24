@@ -5,11 +5,11 @@ namespace TimeRegionsTemplateSelector;
 
 public partial class MainPage : ContentPage
 {
-
 	public MainPage()
 	{
 		InitializeComponent();
-		this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
+
+        this.Scheduler.TimelineView.TimeRegions = this.GetTimeRegion();
         this.Scheduler.DaysView.TimeRegions = this.GetTimeRegion();
     }
 

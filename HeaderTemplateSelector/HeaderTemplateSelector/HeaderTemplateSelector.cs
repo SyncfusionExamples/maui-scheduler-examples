@@ -1,9 +1,4 @@
 ﻿using Syncfusion.Maui.Scheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HeaderTemplateSelector
 {
@@ -12,8 +7,8 @@ namespace HeaderTemplateSelector
         public HeaderTemplateSelector()
         {
         }
-        public DataTemplate TodayDatesTemplate { get; set; }
-        public DataTemplate NormaldatesTemplate { get; set; }
+        public DataTemplate TodayDatesTemplate { get; set; } = new DataTemplate();
+        public DataTemplate NormaldatesTemplate { get; set; } = new DataTemplate();
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             var headerDetails = item as SchedulerHeaderDetails;

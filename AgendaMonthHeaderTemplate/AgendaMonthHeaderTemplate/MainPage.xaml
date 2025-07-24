@@ -3,24 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaMonthHeaderTemplate.MainPage"
              xmlns:local="clr-namespace:AgendaMonthHeaderTemplate"
+             xmlns:system="datetime"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <Grid>
-<Grid.Resources>
-    <local:MonthToImageConvertor x:Key="MonthToImageConvertor"/>
-    <DataTemplate x:Key="AgendaHeaderTemplate">
-        <Grid>
-            <Image Aspect="Fill" Source="{Binding Converter={StaticResource MonthToImageConvertor}}"/>
-            <Label x:Name="label" HorizontalOptions="Start" VerticalOptions="Start" TextColor="Black" FontSize="16" Padding="55, 20, 0, 0" Text="{Binding StringFormat='{0:MMMM yyyy}'}"/>
-        </Grid>
-    </DataTemplate>
-</Grid.Resources>
+        <Grid.Resources>
+            <local:MonthToImageConvertor x:Key="MonthToImageConvertor" />
+            <DataTemplate x:Key="AgendaHeaderTemplate"
+                          x:DataType="local:MonthToImageConvertor">
+                <Grid>
+                    <Image Aspect="Fill"
+                           Source="{Binding Converter={StaticResource MonthToImageConvertor}}" />
+                    <Label x:Name="label"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           TextColor="Black"
+                           FontSize="16"
+                           Padding="55, 20, 0, 0"
+                           Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
+                </Grid>
+            </DataTemplate>
+        </Grid.Resources>
 
 
-<scheduler:SfScheduler x:Name="Scheduler"
-                View="Agenda">
-    <scheduler:SfScheduler.AgendaView>
-        <scheduler:SchedulerAgendaView MonthHeaderTemplate="{StaticResource AgendaHeaderTemplate}"/>
-    </scheduler:SfScheduler.AgendaView>
-</scheduler:SfScheduler>
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Agenda">
+            <scheduler:SfScheduler.AgendaView>
+                <scheduler:SchedulerAgendaView MonthHeaderTemplate="{StaticResource AgendaHeaderTemplate}" />
+            </scheduler:SfScheduler.AgendaView>
+        </scheduler:SfScheduler>
     </Grid>
+
 </ContentPage>

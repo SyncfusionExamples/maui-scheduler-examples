@@ -6,30 +6,44 @@
              BackgroundColor="{DynamicResource SecondaryColor}"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
-<Grid>
-    <Grid.Resources>
-        <DataTemplate x:Key="timeRegiontemplate"
-                      x:DataType="scheduler:SchedulerTimeRegion">
-            <Grid Background = "LightCyan" Opacity="0.5">
-                <Label x:Name="label" HorizontalOptions="Center" TextColor="Red" Text="{Binding Text}" VerticalOptions="Center" />
-            </Grid>
-        </DataTemplate>
-        <DataTemplate x:Key="timeRegiontemplate1"
-                      x:DataType="scheduler:SchedulerTimeRegion">
-            <Grid Background = "Lightgreen" Opacity="0.5">
-                <Label x:Name="label" HorizontalOptions="Center" TextColor="Orange" Text="{Binding Text}" VerticalOptions="Center" />
-            </Grid>
-        </DataTemplate>
-        <local:TimeRegionTemplateSelector x:Key="timeRegionTemplateSelector"  TimeRegionsTemplate="{StaticResource timeRegiontemplate}"  TimeRegionsTemplate1="{StaticResource timeRegiontemplate1}" />
-    </Grid.Resources>
-    <scheduler:SfScheduler x:Name="Scheduler" AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek"
-                        View="TimelineWeek">
-        <scheduler:SfScheduler.TimelineView>
-            <scheduler:SchedulerTimelineView TimeRegionTemplate = "{StaticResource timeRegionTemplateSelector}"/>
-        </scheduler:SfScheduler.TimelineView>
-        <scheduler:SfScheduler.DaysView>
-            <scheduler:SchedulerDaysView TimeRegionTemplate = "{StaticResource timeRegionTemplateSelector}"/>
-        </scheduler:SfScheduler.DaysView>
-    </scheduler:SfScheduler>
-</Grid>
+    <Grid>
+        <Grid.Resources>
+            <DataTemplate x:Key="timeRegiontemplate">
+                <Grid Background="LightCyan"
+                      Opacity="0.5">
+                    <Label x:Name="label"
+                           x:DataType="scheduler:SchedulerTimeRegion"
+                           HorizontalOptions="Center"
+                           TextColor="Red"
+                           Text="{Binding Text}"
+                           VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+            <DataTemplate x:Key="timeRegiontemplate1">
+                <Grid Background="Lightgreen"
+                      Opacity="0.5">
+                    <Label x:Name="label"
+                           x:DataType="scheduler:SchedulerTimeRegion"
+                           HorizontalOptions="Center"
+                           TextColor="Orange"
+                           Text="{Binding Text}"
+                           VerticalOptions="Center" />
+                </Grid>
+            </DataTemplate>
+            <local:TimeRegionTemplateSelector x:Key="timeRegionTemplateSelector"
+                                              TimeRegionsTemplate="{StaticResource timeRegiontemplate}"
+                                              TimeRegionsTemplate1="{StaticResource timeRegiontemplate1}" />
+        </Grid.Resources>
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               AllowedViews="Day,Week,WorkWeek,TimelineDay,TimelineWeek,TimelineWorkWeek"
+                               View="TimelineWeek">
+            <scheduler:SfScheduler.TimelineView>
+                <scheduler:SchedulerTimelineView TimeRegionTemplate="{StaticResource timeRegionTemplateSelector}" />
+            </scheduler:SfScheduler.TimelineView>
+            <scheduler:SfScheduler.DaysView>
+                <scheduler:SchedulerDaysView TimeRegionTemplate="{StaticResource timeRegionTemplateSelector}" />
+            </scheduler:SfScheduler.DaysView>
+        </scheduler:SfScheduler>
+    </Grid>
+
 </ContentPage>

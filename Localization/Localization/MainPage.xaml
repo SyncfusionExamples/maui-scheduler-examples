@@ -4,10 +4,11 @@
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              x:Class="Localization.MainPage">
 
-    <scheduler:SfScheduler x:Name="Scheduler" 
+    <scheduler:SfScheduler x:Name="Scheduler"
                            View="Day"
                            FirstDayOfWeek="Monday"
                            ShowWeekNumber="True"
                            AllowedViews="Day,Week,WorkWeek,Agenda,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth">
     </scheduler:SfScheduler>
+
 </ContentPage>

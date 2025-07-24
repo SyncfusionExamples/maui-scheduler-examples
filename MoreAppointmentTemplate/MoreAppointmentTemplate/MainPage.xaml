@@ -3,38 +3,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MoreAppointmentTemplate.MainPage"
              BackgroundColor="{DynamicResource SecondaryColor}"
-             xmlns:local="clr-namespace:MoreAppointmentTemplate">
+             xmlns:local="clr-namespace:MoreAppointmentTemplate"
+             xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
+
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="moreAppointmentsTemplate">
-                <StackLayout Background="LightGreen" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-                    <Label Text="{Binding}" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <StackLayout 
+                    x:DataType="scheduler:SchedulerDaysView"
+                    Background="LightGreen"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="FillAndExpand">
+                    <Label
+                        x:DataType="scheduler:SchedulerDaysView"
+                        Text="{Binding}"
+                           TextColor="Black"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center">
                     </Label>
                 </StackLayout>
             </DataTemplate>
         </Grid.Resources>
-        <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Day">
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Day">
             <scheduler:SfScheduler.AppointmentMapping>
-                <scheduler:SchedulerAppointmentMapping
-                        Subject="EventName"
-                        StartTime="From"
-                        EndTime="To"
-                        Background="Background"
-                        IsAllDay="IsAllDay"
-                        StartTimeZone="StartTimeZone"
-                        EndTimeZone="EndTimeZone"
-                        RecurrenceExceptionDates="RecurrenceExceptions"
-                        RecurrenceRule="RecurrenceRule"
-                        RecurrenceId="RecurrenceId"/>
+                <scheduler:SchedulerAppointmentMapping Subject="EventName"
+                                                       StartTime="From"
+                                                       EndTime="To"
+                                                       Background="Background"
+                                                       IsAllDay="IsAllDay"
+                                                       StartTimeZone="StartTimeZone"
+                                                       EndTimeZone="EndTimeZone"
+                                                       RecurrenceExceptionDates="RecurrenceExceptions"
+                                                       RecurrenceRule="RecurrenceRule"
+                                                       RecurrenceId="RecurrenceId" />
             </scheduler:SfScheduler.AppointmentMapping>
             <scheduler:SfScheduler.DaysView>
-                <scheduler:SchedulerDaysView
-                               MoreAppointmentsTemplate="{StaticResource moreAppointmentsTemplate}"/>
+                <scheduler:SchedulerDaysView MoreAppointmentsTemplate="{StaticResource moreAppointmentsTemplate}" />
             </scheduler:SfScheduler.DaysView>
             <scheduler:SfScheduler.Behaviors>
-                <local:ScheduleBehavior/>
+                <local:ScheduleBehavior />
             </scheduler:SfScheduler.Behaviors>
         </scheduler:SfScheduler>
     </Grid>
+
 </ContentPage>
