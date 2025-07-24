@@ -1,7 +1,4 @@
-﻿using Syncfusion.Maui.Scheduler;
-using System.Collections.ObjectModel;
-
-namespace LoadOnDemand;
+﻿namespace LoadOnDemand;
 
 public partial class MainPage : ContentPage
 {

@@ -1,18 +1,9 @@
-﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Graphics;
-using Syncfusion.Maui.Scheduler;
-using System;
-using System.Collections.Generic;
+﻿using Syncfusion.Maui.Scheduler;
 using System.Collections.ObjectModel;
-using System.Linq;
-using Scheduler = Syncfusion.Maui.Scheduler.SfScheduler;
 
 namespace AllDayAppointmentTemplate
 {
-    /// <summary>
-    /// The scheduler view customization behavior.
-    /// </summary>
-    internal class ScheduleBehavior : Behavior<Syncfusion.Maui.Scheduler.SfScheduler>
+    internal class ScheduleBehavior : Behavior<SfScheduler>
     {
         /// <summary>
         /// Holds the appointment source collection.
@@ -22,7 +13,7 @@ namespace AllDayAppointmentTemplate
         /// <summary>
         /// Holds the scheduler object
         /// </summary>
-        private Scheduler? scheduler;
+        private SfScheduler? scheduler;
 
         protected override void OnAttachedTo(Syncfusion.Maui.Scheduler.SfScheduler bindable)
         {

@@ -1,9 +1,4 @@
 ﻿using Syncfusion.Maui.Scheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MonthCellTemplateSelector
 {
@@ -12,11 +7,15 @@ namespace MonthCellTemplateSelector
         public MonthCellTemplateSelector()
         {
         }
-        public DataTemplate NormalDateTemplate { get; set; }
-        public DataTemplate TodayDateTemplate { get; set; }
+        public DataTemplate NormalDateTemplate { get; set; } = new DataTemplate();
+        public DataTemplate TodayDateTemplate { get; set; } = new DataTemplate();
         protected override DataTemplate OnSelectTemplate(object item, BindableObject container)
         {
             var monthCellDetails = item as SchedulerMonthCellDetails;
+            if (monthCellDetails == null)
+            {
+                return new DataTemplate();
+            }
             if (monthCellDetails.DateTime.Date == DateTime.Today.Date)
                 return TodayDateTemplate;
             else

@@ -1,9 +1,7 @@
-﻿namespace ResourceBusinessObject
-{
-    using System;
-    using Microsoft.Maui.Controls;
-    using Syncfusion.Maui.Scheduler;
+﻿using Syncfusion.Maui.Scheduler;
 
+namespace ResourceBusinessObject
+{
     internal class ResourceViewBehavior : Behavior<ContentPage>
     {
         /// <summary>

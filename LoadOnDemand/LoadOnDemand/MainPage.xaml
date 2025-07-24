@@ -4,14 +4,17 @@
              x:Class="LoadOnDemand.MainPage"
              xmlns:local="clr-namespace:LoadOnDemand"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
-<scheduler:SfScheduler x:Name="Scheduler" 
-                     View="{Binding SchedulerView, Mode=TwoWay}"
-                       AllowedViews="Day,Week,WorkWeek,Agenda"
-                    AppointmentsSource="{Binding Events}"
-                    ShowBusyIndicator="{Binding ShowBusyIndicator}"
-                    QueryAppointmentsCommand="{Binding QueryAppointmentsCommand}">
-<scheduler:SfScheduler.BindingContext>
-        <local:LoadOnDemandViewModel/>
-</scheduler:SfScheduler.BindingContext>
-</scheduler:SfScheduler>
+
+    <scheduler:SfScheduler x:Name="Scheduler"
+                           x:DataType="local:LoadOnDemandViewModel"
+                           View="{Binding SchedulerView, Mode=TwoWay}"
+                           AllowedViews="Day,Week,WorkWeek,Agenda"
+                           AppointmentsSource="{Binding Events}"
+                           ShowBusyIndicator="{Binding ShowBusyIndicator}"
+                           QueryAppointmentsCommand="{Binding QueryAppointmentsCommand}">
+        <scheduler:SfScheduler.BindingContext>
+            <local:LoadOnDemandViewModel />
+        </scheduler:SfScheduler.BindingContext>
+    </scheduler:SfScheduler>
+
 </ContentPage>

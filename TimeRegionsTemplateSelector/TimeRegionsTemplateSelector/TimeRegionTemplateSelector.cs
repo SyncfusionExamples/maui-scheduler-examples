@@ -1,9 +1,4 @@
 ﻿using Syncfusion.Maui.Scheduler;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TimeRegionsTemplateSelector
 {
@@ -19,6 +14,7 @@ namespace TimeRegionsTemplateSelector
             var timeRegionDetails = item as SchedulerTimeRegion;
             if (timeRegionDetails == null)
                 return new DataTemplate();
+
             if (timeRegionDetails.EnablePointerInteraction)
                 return TimeRegionsTemplate;
             return TimeRegionsTemplate1;

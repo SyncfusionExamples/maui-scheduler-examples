@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaViewTemplateSelector", "AgendaViewTemplateSelector\AgendaViewTemplateSelector.csproj", "{E2C26669-7F69-4A83-AA5E-59784D65CD9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaViewTemplateSelector", "AgendaViewTemplateSelector\AgendaViewTemplateSelector.csproj", "{A3461B33-0DE1-47C4-896B-31A228EB6D8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +11,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E2C26669-7F69-4A83-AA5E-59784D65CD9B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3461B33-0DE1-47C4-896B-31A228EB6D8A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

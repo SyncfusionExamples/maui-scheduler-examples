@@ -8,25 +8,36 @@
     <Grid>
         <Grid.Resources>
             <DataTemplate x:Key="headerTemplate">
-                <Grid Background ="Pink">
-                    <Label x:Name="label" TextColor="DarkBlue" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid Background="Pink">
+                    <Label x:Name="label"
+                           TextColor="DarkBlue"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center">
                         <Label.Text>
-                            <MultiBinding StringFormat = "{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
+                            <MultiBinding 
+                                x:DataType="scheduler:SchedulerHeaderDetails"
+                                StringFormat="{}{0:MMM dd, yyyy} - {1:MMM dd, yyyy}">
                                 <Binding Path="StartDate" />
-                                <Binding Path = "EndDate" />
+                                <Binding Path="EndDate" />
                             </MultiBinding>
                         </Label.Text>
                     </Label>
-                    <Label  HorizontalOptions="Center" VerticalOptions="End" Text="{Binding Text}" TextColor="Red" />
+                    <Label  
+                        x:DataType="scheduler:SchedulerHeaderDetails"
+                        HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            Text="{Binding Text}"
+                            TextColor="Red" />
                 </Grid>
             </DataTemplate>
         </Grid.Resources>
-        <scheduler:SfScheduler x:Name="Scheduler" 
-                           View="Week">
-         
+        <scheduler:SfScheduler x:Name="Scheduler"
+                               View="Week">
+
             <scheduler:SfScheduler.HeaderView>
-                <scheduler:SchedulerHeaderView HeaderTemplate="{StaticResource headerTemplate}"/>
+                <scheduler:SchedulerHeaderView HeaderTemplate="{StaticResource headerTemplate}" />
             </scheduler:SfScheduler.HeaderView>
         </scheduler:SfScheduler>
     </Grid>
+
 </ContentPage>

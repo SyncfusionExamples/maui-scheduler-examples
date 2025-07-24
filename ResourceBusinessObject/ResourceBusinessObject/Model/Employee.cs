@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 
 namespace ResourceBusinessObject
 {
@@ -8,11 +6,11 @@ namespace ResourceBusinessObject
     {
         #region Fields
 
-        private string name;
+        private string? name;
         private object? id;
-        private Brush background;
-        private Brush foreground;
-        private string imageName;
+        private Brush? background;
+        private Brush? foreground;
+        private string? imageName;
 
         #endregion
 
@@ -31,7 +29,7 @@ namespace ResourceBusinessObject
 
         #region Properties
 
-        public string Name
+        public string? Name
         {
             get
             {
@@ -70,7 +68,7 @@ namespace ResourceBusinessObject
         }
 
 
-        public Brush Background
+        public Brush? Background
         {
             get
             {
@@ -90,7 +88,7 @@ namespace ResourceBusinessObject
         }
 
 
-        public Brush Foreground
+        public Brush? Foreground
         {
             get
             {
@@ -109,7 +107,7 @@ namespace ResourceBusinessObject
             }
         }
 
-        public string ImageName
+        public string? ImageName
         {
             get
             {
