@@ -9,8 +9,8 @@ namespace CustomReminder
         public bool IsAllDay { get; set; }
         public string EventName { get; set; } = string.Empty;
         public string Notes { get; set; } = string.Empty;
-        public string StartTimeZone { get; set; } = string.Empty;
-        public string EndTimeZone { get; set; } = string.Empty;
+        public TimeZoneInfo? StartTimeZone { get; set; }
+        public TimeZoneInfo? EndTimeZone { get; set; }
         public Brush? Color { get; set; }
         public object? RecurrenceId { get; set; } 
         public object? Id { get; set; }
