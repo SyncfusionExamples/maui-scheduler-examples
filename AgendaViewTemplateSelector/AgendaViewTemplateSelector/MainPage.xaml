@@ -3,36 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaViewTemplateSelector.MainPage"
              xmlns:local="clr-namespace:AgendaViewTemplateSelector"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="todayDateTemplate">
+            <DataTemplate x:Key="todayDateTemplate" x:DataType="system:DateTime">
                 <Grid>
                     <Label x:Name="label"
-                           x:DataType="local:AgendaViewTemplateSelector"
-                           HorizontalOptions="FillAndExpand"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Fill"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                            Background="LightPink"
-                           VerticalOptions="FillAndExpand"
                            TextColor="Yellow"
                            FontSize="25"
                            Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
                 </Grid>
             </DataTemplate>
-            <DataTemplate x:Key="normalDateTemplate">
+            <DataTemplate x:Key="normalDateTemplate" x:DataType="system:DateTime">
                 <Grid>
                     <Label x:Name="label"
-                           x:DataType="local:AgendaViewTemplateSelector"
-                           HorizontalOptions="FillAndExpand"
+                           HorizontalOptions="Fill"
+                           VerticalOptions="Fill"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
                            Background="MediumPurple"
-                           VerticalOptions="FillAndExpand"
-                           TextColor="Black"
+                           TextColor="White"
                            FontSize="25"
                            Text="{Binding StringFormat='{0:MMMM yyyy}'}" />
                 </Grid>
             </DataTemplate>
             <local:AgendaViewTemplateSelector x:Key="agendaViewTemplateSelector"
-                                              x:DataType="local:AgendaViewTemplateSelector"
                                               TodayDateTemplate="{StaticResource todayDateTemplate}"
                                               NormalDateTemplate="{StaticResource normalDateTemplate}" />
         </Grid.Resources>

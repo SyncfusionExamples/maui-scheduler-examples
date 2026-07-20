@@ -8,8 +8,7 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="viewHeaderTemplate"
-                          x:DataType="scheduler:SchedulerTimeRegion">
+            <DataTemplate x:Key="viewHeaderTemplate" x:DataType="system:DateTime">
                 <StackLayout x:Name="stackLayout"
                              Orientation="Vertical"
                              Background="MediumPurple">
@@ -58,7 +57,7 @@
                     </StackLayout.Triggers>
                 </StackLayout>
             </DataTemplate>
-            <DataTemplate x:Key="timelineViewHeaderTemplate">
+            <DataTemplate x:Key="timelineViewHeaderTemplate" x:DataType="system:DateTime">
                 <Grid x:Name="grid"
                       Background="MediumPurple">
                     <Label x:Name="label"

@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AgendaMonthHeaderTemplate.MainPage"
              xmlns:local="clr-namespace:AgendaMonthHeaderTemplate"
-             xmlns:system="datetime"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler">
 
     <Grid>
         <Grid.Resources>
             <local:MonthToImageConvertor x:Key="MonthToImageConvertor" />
             <DataTemplate x:Key="AgendaHeaderTemplate"
-                          x:DataType="local:MonthToImageConvertor">
+                          x:DataType="system:DateTime">
                 <Grid>
                     <Image Aspect="Fill"
                            Source="{Binding Converter={StaticResource MonthToImageConvertor}}" />

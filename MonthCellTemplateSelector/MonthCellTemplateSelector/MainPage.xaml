@@ -8,14 +8,14 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="normalDateTemplate">
+            <DataTemplate x:Key="normalDateTemplate" x:DataType="scheduler:SchedulerMonthCellDetails">
                 <Border Background="MediumPurple">
                     <Label HorizontalTextAlignment="Center"
                            TextColor="Green"
                            Text="{Binding DateTime.Day}" />
                 </Border>
             </DataTemplate>
-            <DataTemplate x:Key="todayDateTemplate">
+            <DataTemplate x:Key="todayDateTemplate" x:DataType="scheduler:SchedulerMonthCellDetails">
                 <Border Background="MediumPurple">
                     <Label HorizontalTextAlignment="Center"
                            TextColor="Red"

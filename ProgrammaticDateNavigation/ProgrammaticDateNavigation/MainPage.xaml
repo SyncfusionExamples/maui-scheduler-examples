@@ -15,8 +15,8 @@
         <Button x:Name="button"
                 Text="Change display date"
                 Clicked="button_Clicked"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
                 Grid.Row="1" />
     </Grid>
 

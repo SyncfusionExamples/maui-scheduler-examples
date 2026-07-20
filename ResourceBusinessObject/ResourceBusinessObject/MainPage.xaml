@@ -25,7 +25,7 @@
                     Resources="{Binding Resources}">
                     <schedule:SchedulerResourceView.HeaderTemplate>
                         <DataTemplate
-                            x:DataType="local:Employee">
+                            x:DataType="schedule:SchedulerResource">
                             <StackLayout Padding="5"
                                          Orientation="Vertical"
                                          VerticalOptions="Center"

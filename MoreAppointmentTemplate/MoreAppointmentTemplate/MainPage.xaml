@@ -8,20 +8,16 @@
 
     <Grid>
         <Grid.Resources>
-            <DataTemplate x:Key="moreAppointmentsTemplate">
-                <StackLayout 
-                    x:DataType="scheduler:SchedulerDaysView"
-                    Background="LightGreen"
-                             HorizontalOptions="FillAndExpand"
-                             VerticalOptions="FillAndExpand">
-                    <Label
-                        x:DataType="scheduler:SchedulerDaysView"
-                        Text="{Binding}"
+            <DataTemplate x:Key="moreAppointmentsTemplate" x:DataType="scheduler:SchedulerDaysView">
+                <Grid Background="LightGreen"
+                      HorizontalOptions="Fill"
+                      VerticalOptions="Fill">
+                    <Label Text="More appointments"
                            TextColor="Black"
                            HorizontalTextAlignment="Center"
                            VerticalTextAlignment="Center">
                     </Label>
-                </StackLayout>
+                </Grid>
             </DataTemplate>
         </Grid.Resources>
         <scheduler:SfScheduler x:Name="Scheduler"
